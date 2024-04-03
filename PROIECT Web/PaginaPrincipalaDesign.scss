@@ -1,0 +1,94 @@
+@import './variabile';
+
+@function weight($weight-name){
+  @return map-get($font-weights,$weight-name);
+}
+
+body {
+  background: $background-color;
+  font-family: 'Verdana', sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $background-color-header;
+  padding: 10px 20px;
+
+  &__logo img{
+    display: block;
+    width: 40px;
+    height: auto;
+
+  }
+
+  &__links {
+    list-style: none;
+    display: flex;
+    margin-left: 100px;
+
+    &__item {
+      &--link a{
+        font-weight: weight(bold);
+        text-decoration: none;
+        color: $background-color;
+        padding: 0 15px;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: #555;
+        }
+      }
+    }
+  }
+
+  &__buttons {
+    &--button {
+      font-weight: weight(bold);
+      padding: 8px 15px;
+      margin-left: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #ddd;
+      }
+    }
+  }
+}
+
+.imagine-centru {
+  display: block;
+  margin: 3% auto;
+  border-radius: 15px;
+  width: 50vw;
+  height: auto;
+  border: 3px solid #272727;
+}
+.container {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 80%;
+  left: 10%;
+  right: 10%;
+  background: rgba(255, 255, 255, 0.96); /* transparență */
+  padding: 90px;
+  border-radius: 20px;
+
+}
+
+
+
+// Resetarea stilurilor implicite ale browserului
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
