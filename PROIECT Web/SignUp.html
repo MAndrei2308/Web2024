@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="Login.css">
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="signUp.css">
 </head>
 
 <body>
-    <div class="login-container">
-        <h2>Login Form</h2>
+    <div class="sign-up-container">
+        <h2>Sign Up Form</h2>
 
         <div class="pozaProfil">
             <img src="img_profil.png">
@@ -21,16 +21,19 @@
             <label for="password"><b>Password</b></label>
             <input type="password" placeholder="Enter Password" name="password" required>
 
+            <label for="password_repeat"><b>Repeat Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password_repeat" required>
+
             <div class="check">
                 <input type="checkbox" name="rememberMe">
                 <label for="rememberMe">Remember me</label>
             </div>
+            <span class="Terms-Privacy">By creating an account you agree to our <a href="#">Terms & Privacy</a>.</span>
 
-            <button type="submit" class="submit">Login</button>
-            <div class="cancel-forgot">
+            <div class="login-cancel">
+                <button type="submit" class="submit">Sign Up</button>
                 <button type="button" class="cancelButton" onclick="history.back();">Cancel</button>
 
-                <span class="password">Forgot <a href="#">password</a>?</span>
             </div>
         </form>
     </div>
