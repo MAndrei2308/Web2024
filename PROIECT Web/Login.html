@@ -1,10 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="Login.css">
 </head>
-<body>
 
+<body>
+    <div class="login-container">
+        <h2>Login Form</h2>
+
+        <div class="pozaProfil">
+            <img src="img_profil.png">
+        </div>
+        <form action="#" method="post">
+            <label for="username"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="username" required>
+
+            <label for="password"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+
+            <div class="check">
+                <input type="checkbox" name="rememberMe">
+                <label for="rememberMe">Remember me</label>
+            </div>
+
+            <button type="submit" class="submit">Login</button>
+            <div class="cancel-forgot">
+                <button type="button" class="cancelButton">Cancel</button>
+
+                <span class="password">Forgot <a href="#">password</a>?</span>
+            </div>
+        </form>
+    </div>
 </body>
+
 </html>
