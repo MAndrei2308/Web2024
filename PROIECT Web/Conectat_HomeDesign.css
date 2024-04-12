@@ -46,7 +46,7 @@ header .logo span {
 .navbar__links {
   list-style: none;
   display: flex;
-  margin-left: 0px;
+  margin-right: 3rem;
 }
 .navbar__links__item--link a {
   font-weight: 700;
@@ -59,17 +59,22 @@ header .logo span {
 .navbar__links__item--link a:hover {
   color: #555;
 }
-.navbar__buttons--button {
-  font-weight: 700;
+.navbar__buttons {
+  position: relative;
+  margin-right: 8.6rem;
+}
+.navbar__buttons #user {
+  display: none;
+}
+.navbar__buttons img {
   padding: 1rem 1.5rem;
-  font-size: 1.5rem;
   margin-left: 10px;
-  border: none;
   border-radius: 25px;
+  border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-.navbar__buttons--button:hover {
+.navbar__buttons img:hover {
   background-color: #9f9d9d;
 }
 
@@ -221,4 +226,4 @@ html {
   transition: 0.2s linear;
 }
 
-/*# sourceMappingURL=PaginaPrincipalaDesign.css.map */
+/*# sourceMappingURL=Conectat_HomeDesign.css.map */

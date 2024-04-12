@@ -47,7 +47,7 @@ header .logo span{
   &__links {
     list-style: none;
     display: flex;
-    margin-left: 0px;
+    margin-right: 3rem;
 
     &__item {
       &--link a {
@@ -66,44 +66,51 @@ header .logo span{
   }
 
   &__buttons {
+    position: relative;
+    margin-right: 8.6rem;
 
-    &--button {
-      font-weight: weight(bold);
+#user{
+  display:none;
+}
+
+    img {
       padding: 1rem 1.5rem;
-      font-size: 1.5rem;
       margin-left: 10px;
-      border: none;
       border-radius: 25px;
+      border: none;
       cursor: pointer;
       transition: background-color 0.3s ease;
 
 
       &:hover {
         background-color: #9f9d9d;
+
       }
     }
+
   }
 }
+
 header #toggler{
- display:none;
+  display:none;
 }
-  header .toggler-icon{
+header .toggler-icon{
   font-size: 3rem;
-    color: #E5E3D9;
-    border-radius: .5rem;
-    padding: .5rem 1.5rem;
-    cursor: pointer;
-    border: .1rem solid rgba(0,0,0,.3);
-    display: none;
+  color: #E5E3D9;
+  border-radius: .5rem;
+  padding: .5rem 1.5rem;
+  cursor: pointer;
+  border: .1rem solid rgba(0,0,0,.3);
+  display: none;
 }
-  @media (max-width: 991px) {
-   html{
-     font-size: 60%;
-   }
-    header{
-      padding: 2rem;
-    }
+@media (max-width: 991px) {
+  html{
+    font-size: 60%;
   }
+  header{
+    padding: 2rem;
+  }
+}
 @media (max-width: 768px){
   header .toggler-icon{
     display: block;
@@ -133,7 +140,7 @@ header #toggler{
   }
 }
 @media (max-width: 450px){
- html{font-size: 55%}
+  html{font-size: 55%}
 }
 
 .container {

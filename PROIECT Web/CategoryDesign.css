@@ -52,8 +52,9 @@ header .logo span {
   font-weight: 700;
   text-decoration: none;
   color: #E5E3D9;
-  padding: 0 10px;
+  padding: 0 40px;
   transition: color 0.3s ease;
+  font-size: 1.5rem;
 }
 .navbar__links__item--link a:hover {
   color: #555;
@@ -61,7 +62,7 @@ header .logo span {
 .navbar__buttons--button {
   font-weight: 700;
   padding: 1rem 1.5rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin-left: 10px;
   border: none;
   border-radius: 25px;
@@ -94,7 +95,7 @@ header .toggler-icon {
     padding: 2rem;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 820px) {
   header .toggler-icon {
     display: block;
   }
