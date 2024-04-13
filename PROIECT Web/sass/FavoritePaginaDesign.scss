@@ -1,0 +1,166 @@
+@import './variabile';
+
+body {
+  background: linear-gradient(to right, #7a766b, #E5E3D9);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.profile-container {
+  background: #fff;
+  width: 60vw;
+  height: 70vh;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 8%;
+  box-shadow: 2px 5px 20px rgba(119, 119, 119, 0.5);
+  border-radius: 25px;
+}
+
+.profile-container__leftbox {
+  top: -5%;
+  left: 5%;
+  position: absolute;
+  width: 15%;
+  height: 110%;
+  background: #272727FF;
+  box-shadow: 3px 3px 10px rgba(119, 119, 119, 0.5);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 1;
+}
+
+.profile-container__rightbox {
+  float: right;
+  width: 70%;
+  height: 100%;
+
+}
+
+
+nav a {
+  list-style: none;
+  padding: 35px;
+  color: #fff;
+  font-size: 1.1em;
+  display: block;
+  transition: all 0.3s ease-in-out;
+}
+
+nav a:hover {
+  color: #95AE74;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+nav a:first-child {
+  margin-top: 7px;
+}
+
+nav a.active {
+  color: #95AE74;
+}
+
+nav a img {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
+.favorite {
+  position: absolute;
+  width: 70%;
+}
+
+.favorite__title {
+  font-family: 'Verdana', sans-serif;
+  color: #95AE74;
+  font-size: 2em;
+  margin-top: 40px;
+  margin-bottom: 35px;
+}
+
+.souvenirs {
+  &__box-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap:0.5rem;
+    padding: 1rem;
+    max-height: calc(100% - 20px);
+  }
+  &__box{
+    display: flex;
+    align-items: center; /* Alinează elementele vertical */
+    justify-content: start; /* Alinează elementele la începutul containerului */
+    flex: 0 1 auto;
+    box-shadow: 0 .5rem 0.5rem rgba(0,0,0,.1);
+    border-radius: .5rem;
+    border: .1rem solid rgba(0,0,0,.1);
+    position: relative;
+    padding: 1rem;
+    width: auto; /* Setează lățimea automată pentru a se ajusta la conținut */
+    margin-right: 1rem;
+  }
+  &__image {
+    position: relative;
+    text-align: left;
+    padding-top: 0.2rem;
+    overflow: hidden;
+    img{
+      height: auto; /* Ajustează înălțimea automat */
+      width: 5rem; /* Setează o lățime fixă pentru imagini */
+      border-radius: .5rem;
+      margin-right: 1rem;
+    }
+
+  }
+
+  &__content{
+    padding: 1rem;
+    text-align: left;
+    h3{
+      font-size: 1rem; /* Ajustează dimensiunea fontului pentru titlu */
+      margin: 0;
+    }
+  }
+}
+
+
+/* Media queries pentru diferite dimensiuni de ecran */
+
+@media (max-width: 991px) {
+  .profile-container {
+    width: 70%;
+
+  }
+
+  html{
+    font-size: 85%;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-container {
+    width: 70%;
+  }
+
+  html{
+    font-size: 80%;
+  }
+}
+
+@media (max-width: 320px) {
+  .profile-container {
+    width: 80%;
+  }
+
+  html{
+    font-size: 70%;
+  }
+}
+
+

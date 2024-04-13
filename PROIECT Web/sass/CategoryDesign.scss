@@ -1,0 +1,335 @@
+@import './variabile';
+
+@function weight($weight-name) {
+  @return map-get($font-weights, $weight-name);
+}
+
+
+body {
+  background: $background-color;
+  font-family: 'Verdana', sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: $background-color-header;
+  padding: 2rem 3%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+  height: 80px;
+}
+
+header .logo img {
+  display: block;
+  width: 2.5rem;
+  height: auto;
+  margin-right: 10px;
+}
+
+header .logo {
+  display: flex;
+
+  font-size: 2rem;
+  color: $background-color;
+  font-weight: weight(bold);
+}
+
+header .logo span {
+  color: #95AE74
+}
+
+.navbar {
+  justify-content: space-between;
+  align-items: center;
+  background-color: $background-color-header;
+  padding: 0 1.5rem;
+
+  &__links {
+    list-style: none;
+    display: flex;
+    margin-left: 0px;
+
+    &__item {
+      &--link a {
+        font-weight: weight(bold);
+        text-decoration: none;
+        color: $background-color;
+        padding: 0 10px;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: #555;
+        }
+      }
+    }
+  }
+
+  &__buttons {
+
+    &--button {
+      font-weight: weight(bold);
+      padding: 1rem 1.5rem;
+      font-size: 1rem;
+      margin-left: 10px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+
+      &:hover {
+        background-color: #9f9d9d;
+      }
+    }
+  }
+}
+
+header #toggler {
+  display: none;
+}
+
+header .toggler-icon {
+  font-size: 3rem;
+  color: #E5E3D9;
+  border-radius: .5rem;
+  padding: .5rem 1.5rem;
+  cursor: pointer;
+  border: .1rem solid rgba(0, 0, 0, .3);
+  display: none;
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 60%;
+  }
+
+  header {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header .toggler-icon {
+    display: block;
+  }
+
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #7a766b;
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    text-align: center;
+    /* Centrare orizontală */
+    display: flex;
+    /* Aliniere verticală în mijloc */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header #toggler:checked~.navbar {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  header .navbar a {
+    margin: 1.3rem;
+    padding: 1.3rem;
+    border-radius: 25px;
+    background: $background-color-header;
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+    display: block;
+
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 55%
+  }
+}
+
+.souvenirs {
+  &__box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+
+  &__box {
+    flex: 1 1 10rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    position: relative;
+    padding: 1rem;
+  }
+
+  &__image {
+    position: relative;
+    text-align: center;
+    padding-top: 1rem;
+    overflow: hidden;
+
+    img {
+      height: 12rem;
+      border-radius: .5rem;
+    }
+
+    &:hover img {
+      transform: scale(1.1);
+    }
+  }
+
+  &__content {
+    padding: 2rem;
+    text-align: center;
+
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+
+.heading {
+  text-align: center;
+  font-size: 3rem;
+  color: $background-color-header;
+  padding: 1rem;
+  margin-top: calc(2% + 80px);
+
+  &__highlight {
+    color: #95AE74;
+  }
+}
+
+.country {
+  text-align: left;
+  font-size: 1.5rem;
+  color: $background-color-header;
+  padding: 1rem;
+  margin: 2rem 2rem 0.5rem;
+  background: rgba(189, 168, 138, 0.55);
+  border-radius: .5rem;
+}
+
+/* Ascunde caseta de selectare */
+#heart-checkbox1 {
+  display: none;
+}
+
+#heart-checkbox2 {
+  display: none;
+}
+
+#heart-checkbox3 {
+  display: none;
+}
+
+#heart-checkbox4 {
+  display: none;
+}
+
+#heart-checkbox5 {
+  display: none;
+}
+
+#heart-checkbox6 {
+  display: none;
+}
+
+/* Stilizează inima */
+.heart-icon {
+  background-image: url('iconheart.png');
+  width: 32px;
+  /* actual width of your image */
+  height: 32px;
+  /* actual height of your image */
+}
+
+/* Stilizează inima atunci când caseta de selectare este bifată */
+#heart-checkbox1:checked+.heart-label .heart-icon {
+  background-image: url('iconheart-rose.png');
+}
+
+#heart-checkbox2:checked+.heart-label .heart-icon {
+  background-image: url('iconheart-rose.png');
+}
+
+#heart-checkbox3:checked+.heart-label .heart-icon {
+  background-image: url('iconheart-rose.png');
+}
+
+#heart-checkbox4:checked+.heart-label .heart-icon {
+  background-image: url('iconheart-rose.png');
+}
+
+#heart-checkbox5:checked+.heart-label .heart-icon {
+  background-image: url('iconheart-rose.png');
+}
+
+#heart-checkbox6:checked+.heart-label .heart-icon {
+  background-image: url('iconheart-rose.png');
+}
+
+@media (max-width: 768px) {}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  overflow-x: hidden;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.toc {
+  background: rgba(255, 255, 255, 0.5);
+  color: $background-color-header;
+  padding: 4vw;
+  border-radius: 2rem;
+  width: 300px;
+  margin: auto;
+
+  h2 {
+    font-size: large;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+
+
+    li {
+      margin-bottom: 0.5rem;
+
+
+      a {
+        text-decoration: none;
+        transition: color 0.3 ease;
+        font-size:medium;
+        padding: 2px;
+        margin: 1rem;
+
+
+        &:hover {
+          color: #95AE74;
+        }
+      }
+    }
+  }
+}
