@@ -191,85 +191,76 @@ header .toggler-icon {
     font-size: 55%;
   }
 }
-.container {
-  position: relative;
-  font-weight: 700;
-}
-.container__image {
-  display: block;
-  margin-top: calc(3% + 80px); /* Set margin from the top to 10% */
-  margin-left: auto; /* Center horizontally */
-  margin-right: auto;
-  border-radius: 15px;
-  max-width: 60vw;
-  height: auto;
-  border: 3px solid #272727;
-}
-.container__overlay {
-  position: absolute;
-  top: 65%; /* Adjusted top position */
-  left: 10%;
-  right: 10%;
-  background: rgba(255, 255, 255, 0.96); /* transparență */
-  padding: 4vw;
-  border-radius: 2rem;
-  margin-left: 2rem;
-  z-index: 1;
-}
-.container__search-bar {
+.about-us {
   display: flex;
-  justify-content: space-around;
   align-items: center;
-}
-.container__search-bar__field {
-  margin-right: 10px;
-  font-size: 1.5rem;
-}
-@media (max-width: 768px) {
-  .container__search-bar__field {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-}
-@media (max-width: 768px) {
-  .container__search-bar {
-    flex-direction: column;
-  }
-}
-.container__search-bar label {
-  margin-right: 10px;
-}
-.container__search-bar__field input[type=text],
-.container__search-bar__field select {
+  height: 100vh;
   width: 100%;
-  padding: 15px;
-  border: 1px solid black;
-  border-radius: 25px; /* Face colțurile mai rotunde */
-  font-size: 1.2rem;
-  outline: none;
+  padding: 90px 0;
+  background: #E5E3D9;
 }
-.container__search-bar__field select {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background-image: url('data:image/svg+xml;utf8,<svg fill="%23282c34" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
-  background-repeat: no-repeat;
-  background-position: right 1rem center;
-  padding-right: 2rem;
+
+.pic {
+  height: auto;
+  width: 500px;
+  border-radius: 12px;
 }
-.container__search-bar__button {
-  background-color: #90c8e0; /* Schimbă culoarea de fundal a butonului */
-  color: white; /* Schimbă culoarea textului butonului */
+
+.about {
+  width: 1130px;
+  max-width: 85%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.text {
+  width: 540px;
+}
+
+.text h2 {
+  color: #333;
+  font-size: 90px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.text h5 {
+  color: #333;
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+span {
+  color: #4070f4;
+}
+
+.text p {
+  color: #333;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 1px;
+}
+
+.data {
+  margin-top: 30px;
+}
+
+.hire {
+  font-size: 18px;
+  background: #4070f4;
+  color: #fff;
+  text-decoration: none;
   border: none;
-  border-radius: 25px; /* Face colțurile mai rotunde */
-  padding: 15px 20px; /* Adaugă spațiu de sus și de jos și spațiu la stânga și la dreapta */
-  font-size: 1.2rem;
-  cursor: pointer;
-  margin-top: 25px;
-  margin-left: 10px;
+  padding: 12px 25px;
+  border-radius: 6px;
+  transition: 0.5s;
 }
-.container__search-bar__button:hover {
-  background-color: #70bad9; /* Schimbă culoarea de fundal a butonului la hover */
+
+.hire:hover {
+  background: #000;
 }
 
 html {
@@ -282,5 +273,4 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: 0.2s linear;
-}/*# sourceMappingURL=PaginaPrincipalaDesign.css.map */
+}/*# sourceMappingURL=AboutUsDesign.css.map */

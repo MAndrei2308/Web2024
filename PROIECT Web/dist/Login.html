@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Login Page</title>
+    <title>Login</title>
     <link rel="stylesheet" href="./css/Login.css">
 </head>
 
@@ -14,7 +14,7 @@
         <div class="pozaProfil">
             <img src="../img/img_profil.png">
         </div>
-        <form action="db.php" method="post">
+        <form action="Conectat_Home.html" method="get">
             <label for="username"><b>Username</b></label>
             <input type="text" placeholder="Enter Username" name="username" required>
 
@@ -26,9 +26,9 @@
                 <label for="rememberMe">Remember me</label>
             </div>
 
-            <button type="submit" class="submit" onclick="">Login</button>
+            <button type="submit" class="submit">Login</button>
             <div class="cancel-forgot">
-                <button type="button" class="cancelButton" onclick="history.back();">Cancel</button>
+                <a href="PaginaPrincipala.html"><button type="button" class="cancelButton" >Cancel</button></a>
 
                 <span class="password">Forgot <a href="#">password</a>? Or <a href="SignUp.html">sign up</a></span>
             </div>

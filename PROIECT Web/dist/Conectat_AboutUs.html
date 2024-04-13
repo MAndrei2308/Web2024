@@ -5,14 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/Conectat_HomeDesign.css">
-    <title>Home</title>
+    <link rel="stylesheet" href="css/Conectat_AboutUsDesign.css">
+    <title>About Us</title>
 </head>
 
 <body>
     <header>
         <div class="logo"><img src="../img/Logo.png">Souvenirs<span>.</span></div>
-
         <input type="checkbox" id="toggler" class="toggler">
         <label for="toggler" class="toggler-icon">☰</label>
 
@@ -26,47 +25,30 @@
         <div class="navbar__buttons">
 
             <input type="checkbox" id="user" class="user">
-            <label for="user" class="user-icon"><a href="ProfilPagina.html"><img src="../img/profile-user.png"></a></label>
+            <label for="user" class="user-icon"><a href="ProfilPagina.html"><img src="../img/profile-user.png">
+                </a></label>
 
         </div>
     </header>
-
-
-
-    <div class="container">
-        <img src="../img/Principal.jpg" class="container__image" alt="imaginea home">
-        <div class="container__overlay">
-            <form class="container__search-bar">
-                <div class="container__search-bar__field">
-                    <label for="location">Location:</label>
-                    <input type="text" id="location" name="location" placeholder="Enter a location...">
+    <section class="about-us">
+        <div class="about">
+            <img src="../img/aboutUs.jpg" class="pic" />
+            <div class="text">
+                <h2>About Us</h2>
+                <h5> <span>Students: </span>Gabriela & Andrei</h5>
+                <p>
+                    Souvenirs is an innovative web application designed for explorers of Europe.
+                    Our goal is to provide a personalized experience in choosing souvenirs,
+                    reflecting the culture and traditions of each visited region.
+                    We aim to connect travelers with the cultural essence of their destinations through souvenirs.
+                    Our vision is for every journey to become a memorable story, enriched with meaningful objects.
+                </p>
+                <div class="data">
+                    <a href="#" class="hire">Help</a>
                 </div>
-                <div class="container__search-bar__field">
-                    <label for="period">Period:</label>
-                    <select id="period" name="period">
-                        <option value="spring">Spring</option>
-                        <option value="summer">Summer</option>
-                        <option value="autumn">Autumn</option>
-                        <option value="winter">Winter</option>
-                    </select>
-                </div>
-                <div class="container__search-bar__field">
-                    <label for="receiver">Receiver:</label>
-                    <select id="receiver" name="receiver">
-                        <option value="0-5">0-5 years</option>
-                        <option value="6-11">6-11 years</option>
-                        <option value="12-18">12-18 years</option>
-                        <option value="19-39">19-39 years</option>
-                        <option value="40+">40+ years</option>
-
-                    </select>
-                </div>
-                <button type="submit" class="container__search-bar__button">Search</button>
-            </form>
+            </div>
         </div>
-    </div>
-
-
+    </section>
 
 </body>
 

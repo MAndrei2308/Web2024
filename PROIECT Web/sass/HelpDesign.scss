@@ -54,16 +54,15 @@ header .logo span {
   &__links {
     list-style: none;
     display: flex;
-    margin-left: 3rem;
+    margin-left: 0px;
 
     &__item {
       &--link a {
         font-weight: weight(bold);
         text-decoration: none;
         color: $background-color;
-        padding: 0 40px;
+        padding: 0 10px;
         transition: color 0.3s ease;
-        font-size: 1.5rem;
 
         &:hover {
           color: #555;
@@ -73,28 +72,22 @@ header .logo span {
   }
 
   &__buttons {
-    position: relative;
-    margin-right: 8.6rem;
 
-    #user {
-      display: none;
-    }
-
-    img {
+    &--button {
+      font-weight: weight(bold);
       padding: 1rem 1.5rem;
+      font-size: 1rem;
       margin-left: 10px;
-      border-radius: 25px;
       border: none;
+      border-radius: 25px;
       cursor: pointer;
       transition: background-color 0.3s ease;
 
 
       &:hover {
         background-color: #9f9d9d;
-
       }
     }
-
   }
 }
 
@@ -167,6 +160,12 @@ header .toggler-icon {
 .container {
   position: relative;
   font-weight: weight(bold);
+  margin: 3rem;
+  margin-top: 90px;
+
+  h1,h2 {
+    padding: 1rem;
+  }
 
   &__image {
     display: block;
@@ -277,3 +276,4 @@ html {
   box-sizing: border-box;
   transition: .2s linear;
 }
+

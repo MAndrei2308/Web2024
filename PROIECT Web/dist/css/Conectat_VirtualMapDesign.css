@@ -1,4 +1,65 @@
 @charset "UTF-8";
+.footer {
+  background-color: #272727;
+  color: #E5E3D9;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__column {
+  flex: 1;
+}
+
+.footer__column h3 {
+  color: #95AE74;
+}
+
+.footer__column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer__column ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer__column a {
+  color: #E5E3D9;
+}
+.footer__column a:hover {
+  color: #95AE74;
+}
+
+.footer__copyright {
+  margin-top: 2rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
+.social-icons img {
+  width: 30px; /* Ajustați dimensiunea iconurilor după nevoie */
+  height: auto;
+}
+
+.spacer {
+  height: 1rem;
+}
+
 body {
   background: #E5E3D9;
   font-family: "Verdana", sans-serif;
@@ -113,8 +174,10 @@ header .toggler-icon {
     border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
             clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    text-align: center; /* Centrare orizontală */
-    display: flex; /* Aliniere verticală în mijloc */
+    text-align: center;
+    /* Centrare orizontală */
+    display: flex;
+    /* Aliniere verticală în mijloc */
     flex-direction: column;
     align-items: center;
   }
@@ -142,8 +205,10 @@ header .toggler-icon {
 }
 .container__image {
   display: block;
-  margin-top: calc(3% + 80px); /* Set margin from the top to 10% */
-  margin-left: auto; /* Center horizontally */
+  margin-top: calc(3% + 80px);
+  /* Set margin from the top to 10% */
+  margin-left: auto;
+  /* Center horizontally */
   margin-right: auto;
   border-radius: 15px;
   width: 723px;
@@ -152,10 +217,12 @@ header .toggler-icon {
 }
 .container__overlay {
   position: absolute;
-  top: 65%; /* Adjusted top position */
+  top: 65%;
+  /* Adjusted top position */
   left: 10%;
   right: 10%;
-  background: rgba(255, 255, 255, 0.96); /* transparență */
+  background: rgba(255, 255, 255, 0.96);
+  /* transparență */
   padding: 4vw;
   border-radius: 2rem;
   margin-left: 2rem;
@@ -189,7 +256,8 @@ header .toggler-icon {
   width: 100%;
   padding: 15px;
   border: 1px solid black;
-  border-radius: 25px; /* Face colțurile mai rotunde */
+  border-radius: 25px;
+  /* Face colțurile mai rotunde */
   font-size: 1.2rem;
   outline: none;
 }
@@ -203,18 +271,23 @@ header .toggler-icon {
   padding-right: 2rem;
 }
 .container__search-bar__button {
-  background-color: #90c8e0; /* Schimbă culoarea de fundal a butonului */
-  color: white; /* Schimbă culoarea textului butonului */
+  background-color: #90c8e0;
+  /* Schimbă culoarea de fundal a butonului */
+  color: white;
+  /* Schimbă culoarea textului butonului */
   border: none;
-  border-radius: 25px; /* Face colțurile mai rotunde */
-  padding: 15px 20px; /* Adaugă spațiu de sus și de jos și spațiu la stânga și la dreapta */
+  border-radius: 25px;
+  /* Face colțurile mai rotunde */
+  padding: 15px 20px;
+  /* Adaugă spațiu de sus și de jos și spațiu la stânga și la dreapta */
   font-size: 1.2rem;
   cursor: pointer;
   margin-top: 25px;
   margin-left: 10px;
 }
 .container__search-bar__button:hover {
-  background-color: #70bad9; /* Schimbă culoarea de fundal a butonului la hover */
+  background-color: #70bad9;
+  /* Schimbă culoarea de fundal a butonului la hover */
 }
 
 html {

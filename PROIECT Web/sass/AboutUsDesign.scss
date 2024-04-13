@@ -48,16 +48,15 @@ header .logo span{
   &__links {
     list-style: none;
     display: flex;
-    margin-left: 3rem;
+    margin-left: 0px;
 
     &__item {
       &--link a {
         font-weight: weight(bold);
         text-decoration: none;
         color: $background-color;
-        padding: 0 40px;
+        padding: 0 10px;
         transition: color 0.3s ease;
-        font-size: 1.5rem;
 
         &:hover {
           color: #555;
@@ -67,28 +66,22 @@ header .logo span{
   }
 
   &__buttons {
-    position: relative;
-    margin-right: 8.6rem;
 
-    #user{
-      display:none;
-    }
-
-    img {
+    &--button {
+      font-weight: weight(bold);
       padding: 1rem 1.5rem;
+      font-size: 1rem;
       margin-left: 10px;
-      border-radius: 25px;
       border: none;
+      border-radius: 25px;
       cursor: pointer;
       transition: background-color 0.3s ease;
 
 
       &:hover {
         background-color: #9f9d9d;
-
       }
     }
-
   }
 }
 header #toggler{
@@ -142,91 +135,70 @@ header .toggler-icon{
 @media (max-width: 450px){
   html{font-size: 55%}
 }
-.souvenirs {
-  &__box-container{
-    display: flex;
-    flex-direction: column;
-    gap:0.5rem;
-    padding: 1rem;
-  }
-  &__box{
-    width: 100%;
-    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
-    border-radius: .5rem;
-    border: .1rem solid rgba(0,0,0,.1);
-    position: relative;
-    padding: 1rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-  &__image {
-    flex: 0 0 auto;
-    text-align: left;
-    padding-top: 1rem;
-    overflow: hidden;
-    img{
-      height: 8rem;
-      border-radius: .5rem;
-    }
-
-  }
-
-  &__content{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-
-    h3{
-
-      padding: 2rem;
-      font-size: 1.5rem;
-    }
-    h4{
-      text-align: center;
-      font-size: 1.5rem;
-    }
-    img{
-      height: 32px;
-      margin-left: auto;
-    }
-  }
-}
 
 
-.heading{
-  text-align: center;
-  font-size: 3rem;
-  color: $background-color-header;
-  padding: 1rem;
-  margin-top: calc(2% + 80px);
+.about-us {
   display: flex;
   align-items: center;
-
-
-  img{ display: block;
-    width: 32px;
-    height: auto;
-    margin-right: 1rem;
-    cursor: pointer;
-  }
-  &__highlight{
-    color:#95AE74;
-  }
-  span {
-    margin-right: 1rem;
-  }
+  height: 100vh;
+  width: 100%;
+  padding: 90px 0;
+  background: #E5E3D9;
+}
+.pic {
+  height: auto;
+  width: 500px;
+  border-radius: 12px;
+}
+.about {
+  width: 1130px;
+  max-width: 85%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.text {
+  width: 540px;
+}
+.text h2 {
+  color: #333;
+  font-size: 90px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.text h5 {
+  color: #333;
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+span {
+  color: #4070f4;
+}
+.text p {
+  color: #333;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 1px;
+}
+.data {
+  margin-top: 30px;
+}
+.hire {
+  font-size: 18px;
+  background: #4070f4;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  transition: 0.5s;
+}
+.hire:hover {
+  background: #000;
 }
 
-.country{
-  text-align: left;
-  font-size: 1.5rem;
-  color: $background-color-header;
-  padding: 1rem;
-  margin: 2rem 2rem 0.5rem;
-  background: rgba(189, 168, 138, 0.55);
-  border-radius: .5rem;
-}
 
 html{
   scroll-behavior: smooth;
