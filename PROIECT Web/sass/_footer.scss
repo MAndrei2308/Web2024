@@ -1,0 +1,61 @@
+.footer {
+    background-color: #272727;
+    color: #E5E3D9;
+    padding: 2rem 0;
+    text-align: center;
+  }
+  
+  .footer__content {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .footer__column {
+    flex: 1;
+  }
+  
+  .footer__column h3 {
+    color: #95AE74;
+  }
+  
+  .footer__column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer__column ul li {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer__column a {
+    color: #E5E3D9;
+
+    &:hover {
+      color: #95AE74;
+    }
+  }
+  
+  .footer__copyright {
+    margin-top: 2rem;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  
+  .social-icons a {
+    display: inline-block;
+    margin: 0 0.5rem;
+  }
+  
+  .social-icons img {
+    width: 30px; /* Ajustați dimensiunea iconurilor după nevoie */
+    height: auto;
+  }
+  
+  .spacer {
+    height: 1rem;
+  }
