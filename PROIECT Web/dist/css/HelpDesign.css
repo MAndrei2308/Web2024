@@ -52,7 +52,8 @@
 }
 
 .social-icons img {
-  width: 30px; /* Ajustați dimensiunea iconurilor după nevoie */
+  width: 30px;
+  /* Ajustați dimensiunea iconurilor după nevoie */
   height: auto;
 }
 
@@ -199,7 +200,8 @@ header .toggler-icon {
   margin: 3rem;
   margin-top: 90px;
 }
-.container h1, .container h2 {
+.container h1,
+.container h2 {
   padding: 1rem;
 }
 .container__image {

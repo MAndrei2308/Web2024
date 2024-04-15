@@ -1,8 +1,8 @@
 @import './variabile';
 @import './footer';
 
-@function weight($weight-name){
-  @return map-get($font-weights,$weight-name);
+@function weight($weight-name) {
+  @return map-get($font-weights, $weight-name);
 }
 
 
@@ -10,32 +10,38 @@ body {
   background: $background-color;
   font-family: 'Verdana', sans-serif;
 }
-header{
+
+header {
   position: fixed;
-  top:0;left:0;right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   background: $background-color-header;
   padding: 2rem 3%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: 1000;
-  box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
   height: 80px;
 }
-header .logo img{
+
+header .logo img {
   display: block;
   width: 2.5rem;
   height: auto;
   margin-right: 10px;
 }
-header .logo{
+
+header .logo {
   display: flex;
 
   font-size: 2rem;
   color: $background-color;
   font-weight: weight(bold);
 }
-header .logo span{
+
+header .logo span {
   color: #95AE74
 }
 
@@ -84,56 +90,71 @@ header .logo span{
     }
   }
 }
-header #toggler{
- display:none;
+
+header #toggler {
+  display: none;
 }
-  header .toggler-icon{
+
+header .toggler-icon {
   font-size: 3rem;
-    color: #E5E3D9;
-    border-radius: .5rem;
-    padding: .5rem 1.5rem;
-    cursor: pointer;
-    border: .1rem solid rgba(0,0,0,.3);
-    display: none;
+  color: #E5E3D9;
+  border-radius: .5rem;
+  padding: .5rem 1.5rem;
+  cursor: pointer;
+  border: .1rem solid rgba(0, 0, 0, .3);
+  display: none;
 }
-  @media (max-width: 991px) {
-   html{
-     font-size: 60%;
-   }
-    header{
-      padding: 2rem;
-    }
+
+@media (max-width: 991px) {
+  html {
+    font-size: 60%;
   }
-@media (max-width: 768px){
-  header .toggler-icon{
+
+  header {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header .toggler-icon {
     display: block;
   }
-  header .navbar{
+
+  header .navbar {
     position: absolute;
-    top:100%;left:0;right: 0;
-    background:#7a766b;
-    border-top: .1rem solid rgba(0,0,0,.1);
-    clip-path: polygon(0 0,100% 0,100% 0,0 0);
-    text-align: center; /* Centrare orizontală */
-    display: flex; /* Aliniere verticală în mijloc */
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #7a766b;
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    text-align: center;
+    /* Centrare orizontală */
+    display: flex;
+    /* Aliniere verticală în mijloc */
     flex-direction: column;
     align-items: center;
   }
-  header #toggler:checked ~ .navbar{
-    clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+
+  header #toggler:checked~.navbar {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
-  header .navbar a{
+
+  header .navbar a {
     margin: 1.3rem;
     padding: 1.3rem;
     border-radius: 25px;
     background: $background-color-header;
-    border-top: .1rem solid rgba(0,0,0,.1);
+    border-top: .1rem solid rgba(0, 0, 0, .1);
     display: block;
 
   }
 }
-@media (max-width: 450px){
- html{font-size: 55%}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 55%
+  }
 }
 
 .container {
@@ -142,20 +163,25 @@ header #toggler{
 
   &__image {
     display: block;
-    margin-top: calc(3% + 80px); /* Set margin from the top to 10% */
-    margin-left: auto; /* Center horizontally */
+    margin-top: calc(3% + 80px);
+    /* Set margin from the top to 10% */
+    margin-left: auto;
+    /* Center horizontally */
     margin-right: auto;
     border-radius: 15px;
     max-width: 60vw;
     height: auto;
     border: 3px solid #272727;
   }
+
   &__overlay {
     position: absolute;
-    top: 65%; /* Adjusted top position */
+    top: 65%;
+    /* Adjusted top position */
     left: 10%;
     right: 10%;
-    background: rgba(255, 255, 255, 0.96); /* transparență */
+    background: rgba(255, 255, 255, 0.96);
+    /* transparență */
     padding: 4vw;
     border-radius: 2rem;
     margin-left: 2rem;
@@ -186,12 +212,14 @@ header #toggler{
     }
 
     &__field {
+
       input[type="text"],
       select {
         width: 100%;
         padding: 15px;
         border: 1px solid black;
-        border-radius: 25px; /* Face colțurile mai rotunde */
+        border-radius: 25px;
+        /* Face colțurile mai rotunde */
         font-size: 1.2rem;
         outline: none;
       }
@@ -206,33 +234,47 @@ header #toggler{
     }
 
     &__button {
-      background-color: #90c8e0; /* Schimbă culoarea de fundal a butonului */
-      color: white; /* Schimbă culoarea textului butonului */
+      background-color: #90c8e0;
+      /* Schimbă culoarea de fundal a butonului */
+      color: white;
+      /* Schimbă culoarea textului butonului */
       border: none;
-      border-radius: 25px; /* Face colțurile mai rotunde */
-      padding: 15px 20px ; /* Adaugă spațiu de sus și de jos și spațiu la stânga și la dreapta */
+      border-radius: 25px;
+      /* Face colțurile mai rotunde */
+      padding: 15px 20px;
+      /* Adaugă spațiu de sus și de jos și spațiu la stânga și la dreapta */
       font-size: 1.2rem;
       cursor: pointer;
       margin-top: 25px;
       margin-left: 10px;
 
       &:hover {
-        background-color: #70bad9; /* Schimbă culoarea de fundal a butonului la hover */
+        background-color: #70bad9;
+        /* Schimbă culoarea de fundal a butonului la hover */
       }
     }
   }
 }
 
 
-html{
+html {
   scroll-behavior: smooth;
-  scroll-padding-top : 6rem ;
+  scroll-padding-top: 6rem;
   overflow-x: hidden;
 }
+
 // Resetarea stilurilor implicite ale browserului
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   transition: .2s linear;
+}
+
+.spacer {
+  height: 2vw;
+}
+
+footer .spacer {
+  height: 1rem;
 }

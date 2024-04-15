@@ -52,7 +52,8 @@
 }
 
 .social-icons img {
-  width: 30px; /* Ajustați dimensiunea iconurilor după nevoie */
+  width: 30px;
+  /* Ajustați dimensiunea iconurilor după nevoie */
   height: auto;
 }
 
@@ -168,8 +169,10 @@ header .toggler-icon {
     border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
             clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    text-align: center; /* Centrare orizontală */
-    display: flex; /* Aliniere verticală în mijloc */
+    text-align: center;
+    /* Centrare orizontală */
+    display: flex;
+    /* Aliniere verticală în mijloc */
     flex-direction: column;
     align-items: center;
   }

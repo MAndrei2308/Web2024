@@ -1,8 +1,8 @@
 @import './variabile';
 @import './footer';
 
-@function weight($weight-name){
-  @return map-get($font-weights,$weight-name);
+@function weight($weight-name) {
+  @return map-get($font-weights, $weight-name);
 }
 
 
@@ -10,32 +10,38 @@ body {
   background: $background-color;
   font-family: 'Verdana', sans-serif;
 }
-header{
+
+header {
   position: fixed;
-  top:0;left:0;right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   background: $background-color-header;
   padding: 2rem 3%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: 1000;
-  box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
   height: 80px;
 }
-header .logo img{
+
+header .logo img {
   display: block;
   width: 2.5rem;
   height: auto;
   margin-right: 10px;
 }
-header .logo{
+
+header .logo {
   display: flex;
 
   font-size: 2rem;
   color: $background-color;
   font-weight: weight(bold);
 }
-header .logo span{
+
+header .logo span {
   color: #95AE74
 }
 
@@ -70,8 +76,8 @@ header .logo span{
     position: relative;
     margin-right: 8.6rem;
 
-    #user{
-      display:none;
+    #user {
+      display: none;
     }
 
     img {
@@ -91,102 +97,123 @@ header .logo span{
 
   }
 }
-header #toggler{
-  display:none;
+
+header #toggler {
+  display: none;
 }
-header .toggler-icon{
+
+header .toggler-icon {
   font-size: 3rem;
   color: #E5E3D9;
   border-radius: .5rem;
   padding: .5rem 1.5rem;
   cursor: pointer;
-  border: .1rem solid rgba(0,0,0,.3);
+  border: .1rem solid rgba(0, 0, 0, .3);
   display: none;
 }
+
 @media (max-width: 991px) {
-  html{
+  html {
     font-size: 60%;
   }
-  header{
+
+  header {
     padding: 2rem;
   }
 }
-@media (max-width: 768px){
-  header .toggler-icon{
+
+@media (max-width: 768px) {
+  header .toggler-icon {
     display: block;
   }
-  header .navbar{
+
+  header .navbar {
     position: absolute;
-    top:100%;left:0;right: 0;
-    background:#7a766b;
-    border-top: .1rem solid rgba(0,0,0,.1);
-    clip-path: polygon(0 0,100% 0,100% 0,0 0);
-    text-align: center; /* Centrare orizontală */
-    display: flex; /* Aliniere verticală în mijloc */
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #7a766b;
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    text-align: center;
+    /* Centrare orizontală */
+    display: flex;
+    /* Aliniere verticală în mijloc */
     flex-direction: column;
     align-items: center;
   }
-  header #toggler:checked ~ .navbar{
-    clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+
+  header #toggler:checked~.navbar {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
-  header .navbar a{
+
+  header .navbar a {
     margin: 1.3rem;
     padding: 1.3rem;
     border-radius: 25px;
     background: $background-color-header;
-    border-top: .1rem solid rgba(0,0,0,.1);
+    border-top: .1rem solid rgba(0, 0, 0, .1);
     display: block;
 
   }
 }
-@media (max-width: 450px){
-  html{font-size: 55%}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 55%
+  }
 }
+
 .souvenirs {
-  &__box-container{
+  &__box-container {
     display: flex;
     flex-direction: column;
-    gap:0.5rem;
+    gap: 0.5rem;
     padding: 1rem;
   }
-  &__box{
+
+  &__box {
     width: 100%;
-    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
     border-radius: .5rem;
-    border: .1rem solid rgba(0,0,0,.1);
+    border: .1rem solid rgba(0, 0, 0, .1);
     position: relative;
     padding: 1rem;
     display: flex;
     flex-direction: row;
     align-items: center;
   }
+
   &__image {
     flex: 0 0 auto;
     text-align: left;
     padding-top: 1rem;
     overflow: hidden;
-    img{
+
+    img {
       height: 8rem;
       border-radius: .5rem;
     }
 
   }
 
-  &__content{
+  &__content {
     flex: 1;
     display: flex;
     flex-direction: column;
 
-    h3{
+    h3 {
 
       padding: 2rem;
       font-size: 1.5rem;
     }
-    h4{
+
+    h4 {
       text-align: center;
       font-size: 1.5rem;
     }
-    img{
+
+    img {
       height: 32px;
       margin-left: auto;
     }
@@ -194,7 +221,7 @@ header .toggler-icon{
 }
 
 
-.heading{
+.heading {
   text-align: center;
   font-size: 3rem;
   color: $background-color-header;
@@ -204,21 +231,24 @@ header .toggler-icon{
   align-items: center;
 
 
-  img{ display: block;
+  img {
+    display: block;
     width: 32px;
     height: auto;
     margin-right: 1rem;
     cursor: pointer;
   }
-  &__highlight{
-    color:#95AE74;
+
+  &__highlight {
+    color: #95AE74;
   }
+
   span {
     margin-right: 1rem;
   }
 }
 
-.country{
+.country {
   text-align: left;
   font-size: 1.5rem;
   color: $background-color-header;
@@ -228,9 +258,9 @@ header .toggler-icon{
   border-radius: .5rem;
 }
 
-html{
+html {
   scroll-behavior: smooth;
-  scroll-padding-top : 6rem ;
+  scroll-padding-top: 6rem;
   overflow-x: hidden;
 }
 
