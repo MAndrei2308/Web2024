@@ -108,15 +108,13 @@ header .logo span {
 .navbar__links {
   list-style: none;
   display: flex;
-  margin-left: 3rem;
 }
 .navbar__links__item--link a {
   font-weight: 700;
   text-decoration: none;
   color: #E5E3D9;
-  padding: 0 40px;
+  padding: 0 10px;
   transition: color 0.3s ease;
-  font-size: 1.5rem;
 }
 .navbar__links__item--link a:hover {
   color: #555;
@@ -256,7 +254,6 @@ header .toggler-icon {
   border-radius: 0.5rem;
 }
 
-/* Ascunde caseta de selectare */
 #heart-checkbox1 {
   display: none;
 }
@@ -281,38 +278,651 @@ header .toggler-icon {
   display: none;
 }
 
-/* Stilizează inima */
-.heart-icon {
-  background-image: url("iconheart.png");
-  width: 32px;
-  /* actual width of your image */
-  height: 32px;
-  /* actual height of your image */
+#heart-checkbox7 {
+  display: none;
 }
 
-/* Stilizează inima atunci când caseta de selectare este bifată */
+#heart-checkbox8 {
+  display: none;
+}
+
+#heart-checkbox9 {
+  display: none;
+}
+
+#heart-checkbox10 {
+  display: none;
+}
+
+#heart-checkbox11 {
+  display: none;
+}
+
+#heart-checkbox12 {
+  display: none;
+}
+
+#heart-checkbox13 {
+  display: none;
+}
+
+#heart-checkbox14 {
+  display: none;
+}
+
+#heart-checkbox15 {
+  display: none;
+}
+
+#heart-checkbox16 {
+  display: none;
+}
+
+#heart-checkbox17 {
+  display: none;
+}
+
+#heart-checkbox18 {
+  display: none;
+}
+
+#heart-checkbox19 {
+  display: none;
+}
+
+#heart-checkbox20 {
+  display: none;
+}
+
+#heart-checkbox21 {
+  display: none;
+}
+
+#heart-checkbox22 {
+  display: none;
+}
+
+#heart-checkbox23 {
+  display: none;
+}
+
+#heart-checkbox24 {
+  display: none;
+}
+
+#heart-checkbox25 {
+  display: none;
+}
+
+#heart-checkbox26 {
+  display: none;
+}
+
+#heart-checkbox27 {
+  display: none;
+}
+
+#heart-checkbox28 {
+  display: none;
+}
+
+#heart-checkbox29 {
+  display: none;
+}
+
+#heart-checkbox30 {
+  display: none;
+}
+
+#heart-checkbox31 {
+  display: none;
+}
+
+#heart-checkbox32 {
+  display: none;
+}
+
+#heart-checkbox33 {
+  display: none;
+}
+
+#heart-checkbox34 {
+  display: none;
+}
+
+#heart-checkbox35 {
+  display: none;
+}
+
+#heart-checkbox36 {
+  display: none;
+}
+
+#heart-checkbox37 {
+  display: none;
+}
+
+#heart-checkbox38 {
+  display: none;
+}
+
+#heart-checkbox39 {
+  display: none;
+}
+
+#heart-checkbox40 {
+  display: none;
+}
+
+#heart-checkbox41 {
+  display: none;
+}
+
+#heart-checkbox42 {
+  display: none;
+}
+
+#heart-checkbox43 {
+  display: none;
+}
+
+#heart-checkbox44 {
+  display: none;
+}
+
+#heart-checkbox45 {
+  display: none;
+}
+
+#heart-checkbox46 {
+  display: none;
+}
+
+#heart-checkbox47 {
+  display: none;
+}
+
+#heart-checkbox48 {
+  display: none;
+}
+
+#heart-checkbox49 {
+  display: none;
+}
+
+#heart-checkbox50 {
+  display: none;
+}
+
+#heart-checkbox51 {
+  display: none;
+}
+
+#heart-checkbox52 {
+  display: none;
+}
+
+#heart-checkbox53 {
+  display: none;
+}
+
+#heart-checkbox54 {
+  display: none;
+}
+
+#heart-checkbox55 {
+  display: none;
+}
+
+#heart-checkbox56 {
+  display: none;
+}
+
+#heart-checkbox57 {
+  display: none;
+}
+
+#heart-checkbox58 {
+  display: none;
+}
+
+#heart-checkbox59 {
+  display: none;
+}
+
+#heart-checkbox60 {
+  display: none;
+}
+
+#heart-checkbox61 {
+  display: none;
+}
+
+#heart-checkbox62 {
+  display: none;
+}
+
+#heart-checkbox63 {
+  display: none;
+}
+
+#heart-checkbox64 {
+  display: none;
+}
+
+#heart-checkbox65 {
+  display: none;
+}
+
+#heart-checkbox66 {
+  display: none;
+}
+
+#heart-checkbox67 {
+  display: none;
+}
+
+#heart-checkbox68 {
+  display: none;
+}
+
+#heart-checkbox69 {
+  display: none;
+}
+
+#heart-checkbox70 {
+  display: none;
+}
+
+#heart-checkbox71 {
+  display: none;
+}
+
+#heart-checkbox72 {
+  display: none;
+}
+
+#heart-checkbox73 {
+  display: none;
+}
+
+#heart-checkbox74 {
+  display: none;
+}
+
+#heart-checkbox75 {
+  display: none;
+}
+
+#heart-checkbox76 {
+  display: none;
+}
+
+#heart-checkbox77 {
+  display: none;
+}
+
+#heart-checkbox78 {
+  display: none;
+}
+
+#heart-checkbox79 {
+  display: none;
+}
+
+#heart-checkbox80 {
+  display: none;
+}
+
+#heart-checkbox81 {
+  display: none;
+}
+
+#heart-checkbox82 {
+  display: none;
+}
+
+#heart-checkbox83 {
+  display: none;
+}
+
+.heart-icon {
+  background-image: url("../../img/iconheart.png");
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+}
+
 #heart-checkbox1:checked + .heart-label .heart-icon {
-  background-image: url("iconheart-rose.png");
+  background-image: url("../../img/iconheart-rose.png");
 }
 
 #heart-checkbox2:checked + .heart-label .heart-icon {
-  background-image: url("iconheart-rose.png");
+  background-image: url("../../img/iconheart-rose.png");
 }
 
 #heart-checkbox3:checked + .heart-label .heart-icon {
-  background-image: url("iconheart-rose.png");
+  background-image: url("../../img/iconheart-rose.png");
 }
 
 #heart-checkbox4:checked + .heart-label .heart-icon {
-  background-image: url("iconheart-rose.png");
+  background-image: url("../../img/iconheart-rose.png");
 }
 
 #heart-checkbox5:checked + .heart-label .heart-icon {
-  background-image: url("iconheart-rose.png");
+  background-image: url("../../img/iconheart-rose.png");
 }
 
 #heart-checkbox6:checked + .heart-label .heart-icon {
-  background-image: url("iconheart-rose.png");
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox7:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox8:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox9:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox10:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox11:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox12:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox13:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox14:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox15:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox16:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox17:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox18:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox19:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox20:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox21:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox22:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox23:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox24:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox25:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox26:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox27:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox28:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox29:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox30:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox31:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox32:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox33:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox34:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox35:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox36:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox37:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox38:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox39:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox40:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox41:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox42:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox43:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox44:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox45:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox46:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox47:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox48:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox49:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox50:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox51:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox52:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox53:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox54:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox55:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox56:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox57:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox58:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox59:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox60:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox61:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox62:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox63:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox64:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox65:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox66:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox67:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox68:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox69:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox70:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox71:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox72:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox73:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox74:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox75:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox76:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox77:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox78:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox79:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox80:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox81:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox82:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
+}
+
+#heart-checkbox83:checked + .heart-label .heart-icon {
+  background-image: url("../../img/iconheart-rose.png");
 }
 
 html {
@@ -348,7 +958,6 @@ html {
 }
 .toc ul li a {
   text-decoration: none;
-  transition: color 0.3 ease;
   font-size: medium;
   padding: 2px;
   margin: 1rem;

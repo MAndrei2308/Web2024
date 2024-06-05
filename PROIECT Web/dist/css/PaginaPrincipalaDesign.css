@@ -129,6 +129,9 @@ header .logo span {
   border-radius: 25px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  background-color: white;
+  text-decoration: none;
+  color: black;
 }
 .navbar__buttons--button:hover {
   background-color: #9f9d9d;
@@ -298,10 +301,25 @@ html {
   transition: 0.2s linear;
 }
 
-.spacer {
-  height: 2vw;
-}
-
 footer .spacer {
   height: 1rem;
+}
+
+@media (max-width: 991px) {
+  footer {
+    padding: 2px 0;
+    margin-top: 5rem;
+  }
+}
+@media (max-width: 768px) {
+  footer {
+    padding: 2px 0;
+    margin-top: 28rem;
+  }
+}
+@media (max-width: 320px) {
+  footer {
+    padding: 2px 0;
+    margin-top: 100rem;
+  }
 }/*# sourceMappingURL=PaginaPrincipalaDesign.css.map */
