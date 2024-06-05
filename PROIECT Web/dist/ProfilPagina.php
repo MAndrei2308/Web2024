@@ -1,0 +1,63 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['user_id'])) {
+    header("Location: Login.php");
+    exit();
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/ProfilPaginaDesign.css">
+    <title>Profile</title>
+</head>
+
+<body>
+
+    <div class="profile-container">
+
+        <div class="profile-container__leftbox">
+            <nav>
+                <a href="php/profil.php" class="nav__user">
+                    <img src="../img/profile-user.png" alt="Profile" class="nav__button-user">
+                </a>
+                <a href="php/favorite.php">
+                    <img src="../img/iconheart-rose.png" alt="Favorite" class="nav__button-favorite">
+                </a>
+                <a href="php/logout.php">
+                    <img src="../img/logout.png" alt="Logout" class="nav__button-logout">
+                </a>
+                <a href="php/home.php">
+                    <img src="../img/undo.png" alt="Undo" class="nav__button-undo">
+                </a>
+            </nav>
+        </div>
+
+
+        <div class="profile-container__rightbox">
+            <div class="profile">
+                <h1 class="profile__title">Personal Info</h1>
+                <h2 class="profile__subtitle">Full Name</h2>
+                <p class="profile__info">First-name Last-name <button class="profile__btn">update</button></p>
+                <h2 class="profile__subtitle">Birthday</h2>
+                <p class="profile__info">Month Day</p>
+                <h2 class="profile__subtitle">Gender</h2>
+                <p class="profile__info">Male/Famale</p>
+                <h2 class="profile__subtitle">Email</h2>
+                <p class="profile__info">example@example.com <button class="profile__btn">update</button></p>
+                <h2 class="profile__subtitle">Password</h2>
+                <p class="profile__info">******** <button class="profile__btn">Change</button></p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

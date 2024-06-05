@@ -56,13 +56,14 @@
         }
 
         .cancel-forgot {
-            margin-top: 5px;
+            margin-top: 1rem;
         }
 
         .cancelButton {
             padding: 8px;
             width: 20%;
             border: none;
+            text-decoration: none;
             border-radius: 3px;
             color: $background-color;
             font-size: 16px;

@@ -108,15 +108,14 @@ header .logo span {
 .navbar__links {
   list-style: none;
   display: flex;
-  margin-right: 3rem;
+  margin-right: 0px;
 }
 .navbar__links__item--link a {
   font-weight: 700;
   text-decoration: none;
   color: #E5E3D9;
-  padding: 0 40px;
+  padding: 0 10px;
   transition: color 0.3s ease;
-  font-size: 1.5rem;
 }
 .navbar__links__item--link a:hover {
   color: #555;
