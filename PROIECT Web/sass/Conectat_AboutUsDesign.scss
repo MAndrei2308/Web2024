@@ -54,16 +54,16 @@ header .logo span {
   &__links {
     list-style: none;
     display: flex;
-    margin-left: 3rem;
+    margin-left: 0px;
 
     &__item {
       &--link a {
         font-weight: weight(bold);
         text-decoration: none;
         color: $background-color;
-        padding: 0 40px;
+        padding: 0 10px;
         transition: color 0.3s ease;
-        font-size: 1.5rem;
+        
 
         &:hover {
           color: #555;

@@ -82,7 +82,9 @@ header .logo span {
       border-radius: 25px;
       cursor: pointer;
       transition: background-color 0.3s ease;
-
+      background-color: white;
+      text-decoration: none;
+      color: black;
 
       &:hover {
         background-color: #9f9d9d;
@@ -223,66 +225,26 @@ header .toggler-icon {
   border-radius: .5rem;
 }
 
-/* Ascunde caseta de selectare */
-#heart-checkbox1 {
-  display: none;
+@for $i from 1 through 83{
+  #heart-checkbox#{$i}{
+    display: none;
+  }
 }
 
-#heart-checkbox2 {
-  display: none;
-}
-
-#heart-checkbox3 {
-  display: none;
-}
-
-#heart-checkbox4 {
-  display: none;
-}
-
-#heart-checkbox5 {
-  display: none;
-}
-
-#heart-checkbox6 {
-  display: none;
-}
-
-/* Stilizează inima */
 .heart-icon {
-  background-image: url('iconheart.png');
+  background-image: url('../img/iconheart.png');
   width: 32px;
-  /* actual width of your image */
   height: 32px;
-  /* actual height of your image */
+  display: inline-block;
 }
 
-/* Stilizează inima atunci când caseta de selectare este bifată */
-#heart-checkbox1:checked+.heart-label .heart-icon {
-  background-image: url('iconheart-rose.png');
+@for $i from 1 through 83 {
+  #heart-checkbox#{$i}:checked + .heart-label .heart-icon {
+    background-image: url('../img/iconheart-rose.png');
+  }
 }
 
-#heart-checkbox2:checked+.heart-label .heart-icon {
-  background-image: url('iconheart-rose.png');
-}
 
-#heart-checkbox3:checked+.heart-label .heart-icon {
-  background-image: url('iconheart-rose.png');
-}
-
-#heart-checkbox4:checked+.heart-label .heart-icon {
-  background-image: url('iconheart-rose.png');
-}
-
-#heart-checkbox5:checked+.heart-label .heart-icon {
-  background-image: url('iconheart-rose.png');
-}
-
-#heart-checkbox6:checked+.heart-label .heart-icon {
-  background-image: url('iconheart-rose.png');
-}
-
-@media (max-width: 768px) {}
 
 html {
   scroll-behavior: smooth;
@@ -321,7 +283,6 @@ html {
 
       a {
         text-decoration: none;
-        transition: color 0.3 ease;
         font-size: medium;
         padding: 2px;
         margin: 1rem;
@@ -332,5 +293,23 @@ html {
         }
       }
     }
+  }
+}
+
+@for $i from 1 through 6 {
+  #heart-checkbox#{$i}{
+    display: none;
+  }
+}
+
+.heart-icon {
+  background-image: url('../../img/iconheart.png');
+  width: 32px; /* actual width of your image */
+  height: 32px; /* actual height of your image */
+}
+
+@for $i from 1 through 6 {
+  #heart-checkbox#{$i}:checked + .heart-label .heart-icon {
+    background-image: url('../../img/iconheart-rose.png');
   }
 }
