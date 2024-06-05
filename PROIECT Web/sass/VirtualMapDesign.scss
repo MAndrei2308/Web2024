@@ -82,7 +82,9 @@ header .logo span {
       border-radius: 25px;
       cursor: pointer;
       transition: background-color 0.3s ease;
-
+      background-color: white;
+      text-decoration: none;
+      color: black;
 
       &:hover {
         background-color: #9f9d9d;
