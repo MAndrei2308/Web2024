@@ -54,7 +54,6 @@ header .logo span {
   &__links {
     list-style: none;
     display: flex;
-    margin-left: 0px;
 
     &__item {
       &--link a {
@@ -229,7 +228,7 @@ header .toggler-icon {
   border-radius: .5rem;
 }
 
-@for $i from 1 through 15 {
+@for $i from 1 through 83{
   #heart-checkbox#{$i}{
     display: none;
   }
@@ -239,9 +238,10 @@ header .toggler-icon {
   background-image: url('../../img/iconheart.png');
   width: 32px;
   height: 32px;
+  display: inline-block;
 }
 
-@for $i from 1 through 15 {
+@for $i from 1 through 83 {
   #heart-checkbox#{$i}:checked + .heart-label .heart-icon {
     background-image: url('../../img/iconheart-rose.png');
   }
@@ -285,7 +285,6 @@ html {
 
       a {
         text-decoration: none;
-        transition: color 0.3 ease;
         font-size: medium;
         padding: 2px;
         margin: 1rem;

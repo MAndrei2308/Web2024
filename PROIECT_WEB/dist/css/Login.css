@@ -47,12 +47,13 @@
   background-color: #7d8a69;
 }
 .login-container form .cancel-forgot {
-  margin-top: 5px;
+  margin-top: 1rem;
 }
 .login-container form .cancelButton {
   padding: 8px;
   width: 20%;
   border: none;
+  text-decoration: none;
   border-radius: 3px;
   color: #E5E3D9;
   font-size: 16px;

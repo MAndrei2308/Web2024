@@ -129,6 +129,9 @@ header .logo span {
   border-radius: 25px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  background-color: white;
+  text-decoration: none;
+  color: black;
 }
 .navbar__buttons--button:hover {
   background-color: #9f9d9d;
@@ -167,8 +170,7 @@ header .toggler-icon {
     right: 0;
     background: #7a766b;
     border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     text-align: center;
     /* Centrare orizontală */
     display: flex;
@@ -177,8 +179,7 @@ header .toggler-icon {
     align-items: center;
   }
   header #toggler:checked ~ .navbar {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
   header .navbar a {
     margin: 1.3rem;
@@ -250,63 +251,11 @@ header .toggler-icon {
   border-radius: 0.5rem;
 }
 
-/* Ascunde caseta de selectare */
-#heart-checkbox1 {
-  display: none;
-}
-
-#heart-checkbox2 {
-  display: none;
-}
-
-#heart-checkbox3 {
-  display: none;
-}
-
-#heart-checkbox4 {
-  display: none;
-}
-
-#heart-checkbox5 {
-  display: none;
-}
-
-#heart-checkbox6 {
-  display: none;
-}
-
-/* Stilizează inima */
 .heart-icon {
-  background-image: url("../img/iconheart.png");
+  background-image: url("../../img/iconheart.png");
   width: 32px;
-  /* actual width of your image */
   height: 32px;
-  /* actual height of your image */
-}
-
-/* Stilizează inima atunci când caseta de selectare este bifată */
-#heart-checkbox1:checked + .heart-label .heart-icon {
-  background-image: url("../img/iconheart-rose.png");
-}
-
-#heart-checkbox2:checked + .heart-label .heart-icon {
-  background-image: url("../img/iconheart-rose.png");
-}
-
-#heart-checkbox3:checked + .heart-label .heart-icon {
-  background-image: url("../img/iconheart-rose.png");
-}
-
-#heart-checkbox4:checked + .heart-label .heart-icon {
-  background-image: url("../img/iconheart-rose.png");
-}
-
-#heart-checkbox5:checked + .heart-label .heart-icon {
-  background-image: url("../img/iconheart-rose.png");
-}
-
-#heart-checkbox6:checked + .heart-label .heart-icon {
-  background-image: url("../img/iconheart-rose.png");
+  display: inline-block;
 }
 
 html {
@@ -342,7 +291,6 @@ html {
 }
 .toc ul li a {
   text-decoration: none;
-  transition: color 0.3 ease;
   font-size: medium;
   padding: 2px;
   margin: 1rem;
@@ -351,56 +299,4 @@ html {
   color: #95AE74;
 }
 
-#heart-checkbox1 {
-  display: none;
-}
-
-#heart-checkbox2 {
-  display: none;
-}
-
-#heart-checkbox3 {
-  display: none;
-}
-
-#heart-checkbox4 {
-  display: none;
-}
-
-#heart-checkbox5 {
-  display: none;
-}
-
-#heart-checkbox6 {
-  display: none;
-}
-
-.heart-icon {
-  background-image: url("../img/iconheart.png");
-  width: 32px; /* actual width of your image */
-  height: 32px; /* actual height of your image */
-}
-
-#heart-checkbox1:checked + .heart-label .heart-icon {
-  background-image: url("../img/iconheart-rose.png");
-}
-
-#heart-checkbox2:checked + .heart-label .heart-icon {
-  background-image: url("../img/iconheart-rose.png");
-}
-
-#heart-checkbox3:checked + .heart-label .heart-icon {
-  background-image: url("../img/iconheart-rose.png");
-}
-
-#heart-checkbox4:checked + .heart-label .heart-icon {
-  background-image: url("../img/iconheart-rose.png");
-}
-
-#heart-checkbox5:checked + .heart-label .heart-icon {
-  background-image: url("../img/iconheart-rose.png");
-}
-
-#heart-checkbox6:checked + .heart-label .heart-icon {
-  background-image: url("../img/iconheart-rose.png");
-}/*# sourceMappingURL=CategoryDesign.css.map */
+/*# sourceMappingURL=CategoryDesign.css.map */
