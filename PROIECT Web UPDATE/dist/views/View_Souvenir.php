@@ -61,22 +61,22 @@ while ($row = $all_product->fetch(PDO::FETCH_ASSOC)) {
     <?php foreach ($products_by_country as $country => $products): ?>
         <h2 class="country" id="<?php echo strtolower($country); ?>"><?php echo $country; ?></h2>
         <div class="souvenirs__box-container">
-            <?php foreach ($products as $product): ?>
-                <div class="souvenirs__box">
+        <?php foreach ($products as $product): ?>
+            <div class="souvenirs__box">
 
-                    <div <?php echo $product['id']; ?>" class="heart-label">
-                        <span class="heart-icon"></span>
-                    </div>
+                <div <?php echo $product['id']; ?>" class="heart-label">
+                <span class="heart-icon"></span>
+            </div>
 
-                    <div class="souvenirs__image">
-                        <img src="uploaded_img/<?php echo $product['image']; ?>" alt="souvenir">
-                    </div>
+            <div class="souvenirs__image">
+                <img src="uploaded_img/<?php echo $product['image']; ?>" alt="souvenir">
+            </div>
 
-                    <div class="souvenirs__content">
-                        <h3><?php echo $product['name']; ?></h3>
-                    </div>
-                </div>
-            <?php endforeach; ?>
+            <div class="souvenirs__content">
+                <h3><?php echo $product['name']; ?></h3>
+            </div>
+            </div>
+        <?php endforeach; ?>
     <?php endforeach; ?>
 </section>
 

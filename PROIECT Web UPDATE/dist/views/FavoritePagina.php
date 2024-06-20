@@ -25,7 +25,7 @@ $favorites = $favoriteController->getUserFavorites($userId);
 
     <nav class="navbar">
         <ul class="navbar__links">
-            <li class="navbar__links__item--link"><a href="../Conectat_Home.html">Home</a></li>
+            <li class="navbar__links__item--link"><a href="Conectat_Home.php">Home</a></li>
             <li class="navbar__links__item--link"><a href="../Conectat_VirtualMap.html">Virtual Map</a></li>
             <li class="navbar__links__item--link"><a href="Conectat_Category.php">Category</a></li>
         </ul>

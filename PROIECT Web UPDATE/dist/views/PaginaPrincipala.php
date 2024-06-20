@@ -5,29 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/Conectat_HomeDesign.css">
+    <link rel="stylesheet" href="../css/PaginaPrincipalaDesign.css">
     <title>Home</title>
 </head>
 
 <body>
     <header>
-        <div class="logo"><img src="../img/Logo.png" alt="logo">Souvenirs<span>.</span></div>
+        <div class="logo"><img src="../../img/Logo.png" alt="logo">Souvenirs<span>.</span></div>
 
         <input type="checkbox" id="toggler" class="toggler">
         <label for="toggler" class="toggler-icon">☰</label>
 
         <nav class="navbar">
             <ul class="navbar__links">
-                <li class="navbar__links__item--link"><a href="Conectat_Home.html">Home</a></li>
-                <li class="navbar__links__item--link"><a href="Conectat_VirtualMap.html">Virtual Map</a></li>
-                <li class="navbar__links__item--link"><a href="views/Conectat_Category.php">Category</a></li>
+                <li class="navbar__links__item--link"><a href="PaginaPrincipala.html">Home</a></li>
+                <li class="navbar__links__item--link"><a href="../VirtualMap.html">Virtual Map</a></li>
+                <li class="navbar__links__item--link"><a href="Category.php">Category</a></li>
             </ul>
         </nav>
         <div class="navbar__buttons">
-
-            <input type="checkbox" id="user" class="user">
-            <label for="user" class="user-icon"><a href="ProfilPagina.html"><img
-                        src="../img/profile-user.png" alt="profile"></a></label>
+            <a href="../Login.html" class="navbar__buttons--button">Login</a>
+            <a href="../SignUp.html" class="navbar__buttons--button">Sign Up</a>
 
         </div>
     </header>
@@ -35,7 +33,7 @@
 
 
     <div class="container">
-        <img src="../img/Principal.jpg" class="container__image" alt="imagineahome">
+        <img src="../../img/Principal.jpg" class="container__image" alt="imaginea home">
         <div class="container__overlay">
             <form class="container__search-bar">
                 <div class="container__search-bar__field">
@@ -54,18 +52,19 @@
                 <div class="container__search-bar__field">
                     <label for="receiver">Receiver:</label>
                     <select id="receiver" name="receiver">
-                        <option value="0-5">0-5 years</option>
-                        <option value="6-11">6-11 years</option>
-                        <option value="12-18">12-18 years</option>
-                        <option value="19-39">19-39 years</option>
-                        <option value="40+">40+ years</option>
-
+                        <option value="Infant">Infant</option>
+                        <option value="Toddler">Toddler</option>
+                        <option value="Child">Child</option>
+                        <option value="Adolescent">Adolescent</option>
+                        <option value="Adult">Adult</option>
+                        <option value="Elderly">Elderly</option>
                     </select>
                 </div>
                 <button type="submit" class="container__search-bar__button">Search</button>
             </form>
         </div>
     </div>
+    <div class="spacer"></div>
 
     <footer class="footer">
         <div class="footer__content">
@@ -76,10 +75,10 @@
                 <p>Phone: 0232 20 1090; Fax: 0232 20 1490</p>
                 <p>Social media</p>
                 <div class="social-icons">
-                    <a href="#" target="_blank"><img src="../img/facebook.png" alt="Facebook"></a>
-                    <a href="#" target="_blank"><img src="../img/instagram.png" alt="Instagram"></a>
-                    <a href="#" target="_blank"><img src="../img/tiktok.png" alt="TikTok"></a>
-                    <a href="#" target="_blank"><img src="../img/twitter.png" alt="Twitter"></a>
+                    <a href="#" target="_blank"><img src="../../img/facebook.png" alt="Facebook"></a>
+                    <a href="#" target="_blank"><img src="../../img/instagram.png" alt="Instagram"></a>
+                    <a href="#" target="_blank"><img src="../../img/tiktok.png" alt="TikTok"></a>
+                    <a href="#" target="_blank"><img src="../../img/twitter.png" alt="Twitter"></a>
                 </div>
             </div>
             <div class="footer__column">
@@ -88,8 +87,8 @@
                 <ul>
                     <li><a href="#">Terms of Use</a></li>
                     <li><a href="#">Privacy and Cookies Statement</a></li>
-                    <li><a href="Conectat_AboutUs.html">About us</a></li>
-                    <li><a href="Conectat_Help.html">Help</a></li>
+                    <li><a href="../AboutUs.html">About us</a></li>
+                    <li><a href="../Help.html">Help</a></li>
                 </ul>
             </div>
         </div>
@@ -97,8 +96,8 @@
             <p>&copy; 2024 Souvenirs. All rights reserved.</p>
         </div>
     </footer>
-
 </body>
+
 
 
 </html>

@@ -20,7 +20,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
             if(password_verify($password, $row['password_hash'])) {
                 $_SESSION['user_id'] = $row['user_id'];
                 $_SESSION['username'] = $row['username'];
-                header("Location: ../Conectat_Home.html");
+                header("Location: ../Conectat_Home.php");
                 exit();
             } else {
                 $_SESSION['error'] = "Incorrect password!";

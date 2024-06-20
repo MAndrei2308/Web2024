@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once '../controllers/FavoriteController.php';
-require_once '../models/Database.php';
+require_once '../models/database.php';
 
 $database = Database::getInstance();
 $db = $database->getConnection();
@@ -25,7 +25,7 @@ while ($row = $allProducts->fetch(PDO::FETCH_ASSOC)) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <link rel="stylesheet" href="../css/Conectat_CategoryDesign.css">
+    <link rel="stylesheet" href="Conectat_CategoryDesign.css">
     <title>Category</title>
 </head>
 
@@ -37,9 +37,9 @@ while ($row = $allProducts->fetch(PDO::FETCH_ASSOC)) {
 
     <nav class="navbar">
         <ul class="navbar__links">
-            <li class="navbar__links__item--link"><a href="Conectat_Home.php">Home</a></li>
+            <li class="navbar__links__item--link"><a href="../views/Conectat_Home.php">Home</a></li>
             <li class="navbar__links__item--link"><a href="../Conectat_VirtualMap.html">Virtual Map</a></li>
-            <li class="navbar__links__item--link"><a href="Conectat_Category.php">Category</a></li>
+            <li class="navbar__links__item--link"><a href="Conectat_Category.html">Category</a></li>
         </ul>
     </nav>
     <div class="navbar__buttons">
