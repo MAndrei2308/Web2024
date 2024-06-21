@@ -4,6 +4,7 @@
   color: #E5E3D9;
   padding: 2rem 0;
   text-align: center;
+  margin-top: auto;
 }
 
 .footer__content {
@@ -53,12 +54,19 @@
 
 .social-icons img {
   width: 30px;
-  /* Ajustați dimensiunea iconurilor după nevoie */
   height: auto;
 }
 
 .spacer {
   height: 1rem;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 body {
@@ -201,11 +209,7 @@ header .toggler-icon {
 }
 .container__image {
   display: block;
-  margin-top: calc(3% + 80px);
-  /* Set margin from the top to 10% */
-  margin-left: auto;
-  /* Center horizontally */
-  margin-right: auto;
+  margin: calc(3% + 80px) auto 3rem;
   border-radius: 15px;
   max-width: 60vw;
   height: auto;

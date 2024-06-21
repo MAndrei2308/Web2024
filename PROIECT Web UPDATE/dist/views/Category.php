@@ -13,12 +13,10 @@ $products_by_country = [];
 while ($row = $all_product->fetch(PDO::FETCH_ASSOC)) {
     $products_by_country[$row['country']][] = $row;
 }
-
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,13 +24,11 @@ while ($row = $all_product->fetch(PDO::FETCH_ASSOC)) {
     <link rel="stylesheet" href="../css/CategoryDesign.css">
     <title>Category</title>
 </head>
-
 <body>
 <header>
     <div class="logo"><img src="../../img/Logo.png" alt="logo">Souvenirs<span>.</span></div>
     <input type="checkbox" id="toggler" class="toggler">
     <label for="toggler" class="toggler-icon">☰</label>
-
     <nav class="navbar">
         <ul class="navbar__links">
             <li class="navbar__links__item--link"><a href="PaginaPrincipala.php">Home</a></li>
@@ -45,10 +41,8 @@ while ($row = $all_product->fetch(PDO::FETCH_ASSOC)) {
         <a href="../SignUp.html" class="navbar__buttons--button">Sign Up</a>
     </div>
 </header>
-
 <section class="souvenirs" id="souvenirs">
     <h1 class="heading"><span class="heading__highlight">Souvenir</span> Products</h1>
-
     <nav class="toc">
         <h2>Cuprins</h2>
         <ul>
@@ -57,29 +51,25 @@ while ($row = $all_product->fetch(PDO::FETCH_ASSOC)) {
             <?php endforeach; ?>
         </ul>
     </nav>
-
     <?php foreach ($products_by_country as $country => $products): ?>
         <h2 class="country" id="<?php echo strtolower($country); ?>"><?php echo $country; ?></h2>
         <div class="souvenirs__box-container">
             <?php foreach ($products as $product): ?>
-                <div class="souvenirs__box">
-
-                    <div <?php echo $product['id']; ?>" class="heart-label">
+                <div class="souvenirs__box" onclick="location.href='ProductDetail.php?id=<?php echo $product['id']; ?>'">
+                    <div class="heart-label" id="<?php echo $product['id']; ?>">
                         <span class="heart-icon"></span>
                     </div>
-
                     <div class="souvenirs__image">
                         <img src="uploaded_img/<?php echo $product['image']; ?>" alt="souvenir">
                     </div>
-
                     <div class="souvenirs__content">
                         <h3><?php echo $product['name']; ?></h3>
                     </div>
                 </div>
             <?php endforeach; ?>
+        </div>
     <?php endforeach; ?>
 </section>
-
 <footer class="footer">
     <div class="footer__content">
         <div class="footer__column">
@@ -111,5 +101,4 @@ while ($row = $all_product->fetch(PDO::FETCH_ASSOC)) {
     </div>
 </footer>
 </body>
-
 </html>

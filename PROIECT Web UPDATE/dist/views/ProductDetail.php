@@ -1,38 +1,40 @@
 <?php
-session_start();
-require_once '../models/database.php';
+require_once '../controllers/DetailController.php';
 
-$database = Database::getInstance();
-$db = $database->getConnection();
-
-// Selectăm toate produsele pentru a le afișa pe pagină
-$sql = "SELECT * FROM products ORDER BY country";
-$all_product = $db->query($sql);
-
-$products_by_country = [];
-while ($row = $all_product->fetch(PDO::FETCH_ASSOC)) {
-    $products_by_country[$row['country']][] = $row;
+if (!isset($_GET['id'])) {
+    echo "No product ID provided.";
+    exit;
 }
 
-?>
+$detailController = new DetailController();
+$product = $detailController->getProductDetail(intval($_GET['id']));
+$country = $product['country'];
 
+$countryCoordinates = [
+    'Italy' => [41.87194, 12.56738],
+    'Spain' => [40.463667, -3.74922],
+    'France' => [46.603354, 1.888334],
+    'Germany' => [51.165691, 10.451526],
+    'Romania' => [45.943161, 24.96676]
+];
+
+$coordinates = isset($countryCoordinates[$country]) ? $countryCoordinates[$country] : [0, 0];
+?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <link rel="stylesheet" href="../css/CategoryDesign.css">
-    <title>Category</title>
+    <title>Product Detail</title>
+    <link rel="stylesheet" href="../css/ProductDetail.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
-
 <body>
 <header>
     <div class="logo"><img src="../../img/Logo.png" alt="logo">Souvenirs<span>.</span></div>
     <input type="checkbox" id="toggler" class="toggler">
     <label for="toggler" class="toggler-icon">☰</label>
-
     <nav class="navbar">
         <ul class="navbar__links">
             <li class="navbar__links__item--link"><a href="PaginaPrincipala.php">Home</a></li>
@@ -45,41 +47,16 @@ while ($row = $all_product->fetch(PDO::FETCH_ASSOC)) {
         <a href="../SignUp.html" class="navbar__buttons--button">Sign Up</a>
     </div>
 </header>
-
-<section class="souvenirs" id="souvenirs">
-    <h1 class="heading"><span class="heading__highlight">Souvenir</span> Products</h1>
-
-    <nav class="toc">
-        <h2>Cuprins</h2>
-        <ul>
-            <?php foreach (array_keys($products_by_country) as $country): ?>
-                <li><a href="#<?php echo strtolower($country); ?>"><?php echo $country; ?></a></li>
-            <?php endforeach; ?>
-        </ul>
-    </nav>
-
-    <?php foreach ($products_by_country as $country => $products): ?>
-        <h2 class="country" id="<?php echo strtolower($country); ?>"><?php echo $country; ?></h2>
-        <div class="souvenirs__box-container">
-        <?php foreach ($products as $product): ?>
-            <div class="souvenirs__box">
-
-                <div <?php echo $product['id']; ?>" class="heart-label">
-                <span class="heart-icon"></span>
-            </div>
-
-            <div class="souvenirs__image">
-                <img src="uploaded_img/<?php echo $product['image']; ?>" alt="souvenir">
-            </div>
-
-            <div class="souvenirs__content">
-                <h3><?php echo $product['name']; ?></h3>
-            </div>
-            </div>
-        <?php endforeach; ?>
-    <?php endforeach; ?>
-</section>
-
+<div class="product-detail">
+    <div class="product-image">
+        <img src="uploaded_img/<?php echo $product['image']; ?>" alt="<?php echo $product['name']; ?>">
+    </div>
+    <div class="product-info">
+        <h1><?php echo $product['name']; ?></h1>
+        <p>descriere produs......</p>
+    </div>
+    <div id="map"></div>
+</div>
 <footer class="footer">
     <div class="footer__content">
         <div class="footer__column">
@@ -110,6 +87,16 @@ while ($row = $all_product->fetch(PDO::FETCH_ASSOC)) {
         <p>&copy; 2024 Souvenirs. All rights reserved.</p>
     </div>
 </footer>
-</body>
+<script>
+    var map = L.map('map').setView([<?php echo $coordinates[0]; ?>, <?php echo $coordinates[1]; ?>], 5);
 
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    L.marker([<?php echo $coordinates[0]; ?>, <?php echo $coordinates[1]; ?>]).addTo(map)
+        .bindPopup('<?php echo $country; ?>')
+        .openPopup();
+</script>
+</body>
 </html>

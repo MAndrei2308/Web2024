@@ -4,6 +4,7 @@
   color: #E5E3D9;
   padding: 2rem 0;
   text-align: center;
+  margin-top: auto;
 }
 
 .footer__content {
@@ -53,12 +54,19 @@
 
 .social-icons img {
   width: 30px;
-  /* Ajustați dimensiunea iconurilor după nevoie */
   height: auto;
 }
 
 .spacer {
   height: 1rem;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 body {
@@ -172,8 +180,7 @@ header .toggler-icon {
     right: 0;
     background: #7a766b;
     border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     text-align: center;
     /* Centrare orizontală */
     display: flex;
@@ -182,8 +189,7 @@ header .toggler-icon {
     align-items: center;
   }
   header #toggler:checked ~ .navbar {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
   header .navbar a {
     margin: 1.3rem;
@@ -205,11 +211,7 @@ header .toggler-icon {
 }
 .container__image {
   display: block;
-  margin-top: calc(3% + 80px);
-  /* Set margin from the top to 10% */
-  margin-left: auto;
-  /* Center horizontally */
-  margin-right: auto;
+  margin: calc(3% + 80px) auto 3rem;
   border-radius: 15px;
   max-width: 60vw;
   height: auto;
@@ -262,9 +264,7 @@ header .toggler-icon {
   outline: none;
 }
 .container__search-bar__field select {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   background-image: url('data:image/svg+xml;utf8,<svg fill="%23282c34" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
   background-repeat: no-repeat;
   background-position: right 1rem center;
@@ -301,4 +301,6 @@ html {
   padding: 0;
   box-sizing: border-box;
   transition: 0.2s linear;
-}/*# sourceMappingURL=Conectat_HomeDesign.css.map */
+}
+
+/*# sourceMappingURL=Conectat_HomeDesign.css.map */

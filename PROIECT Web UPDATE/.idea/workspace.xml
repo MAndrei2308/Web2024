@@ -32,42 +32,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "JavaScript Debug.AboutUs.html.executor": "Run",
-    "JavaScript Debug.Category.html.executor": "Run",
-    "JavaScript Debug.Conectat_Category.html.executor": "Run",
-    "JavaScript Debug.Conectat_Help.html.executor": "Run",
-    "JavaScript Debug.Conectat_Home.html.executor": "Run",
-    "JavaScript Debug.Conectat_VirtualMap.html.executor": "Run",
-    "JavaScript Debug.Documentatie.html.executor": "Run",
-    "JavaScript Debug.FavoritePagina.html.executor": "Run",
-    "JavaScript Debug.Help.html.executor": "Run",
-    "JavaScript Debug.Login.html.executor": "Run",
-    "JavaScript Debug.PaginaPrincipala.html.executor": "Run",
-    "JavaScript Debug.ProfilPagina.html.executor": "Run",
-    "JavaScript Debug.VirtualMap.html.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/xampp/htdocs/PROIECT Web UPDATE/dist/views",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "watcher.settings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript Debug.AboutUs.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.Category.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.Conectat_Category.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.Conectat_Help.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.Conectat_Home.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.Conectat_VirtualMap.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.Documentatie.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.FavoritePagina.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.Help.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.Login.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.PaginaPrincipala.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.ProfilPagina.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.VirtualMap.html.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/PROIECT Web UPDATE/dist/views&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;watcher.settings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\PROIECT Web UPDATE\dist\views" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\PROIECT Web UPDATE\dist\views" />
       <recent name="C:\xampp\htdocs\PROIECT Web UPDATE\dist\css" />
+      <recent name="C:\xampp\htdocs\PROIECT Web UPDATE\dist\views" />
       <recent name="C:\xampp\htdocs\PROIECT Web UPDATE\dist\php" />
       <recent name="C:\xampp\htdocs\PROIECT Web UPDATE\dist\php\uploaded_img" />
       <recent name="C:\xampp\htdocs\PROIECT Web - Part1\dist\css" />
@@ -132,7 +132,8 @@
       <workItem from="1717572624747" duration="68000" />
       <workItem from="1718714965593" duration="14849000" />
       <workItem from="1718791917124" duration="3840000" />
-      <workItem from="1718807793719" duration="16464000" />
+      <workItem from="1718807793719" duration="18635000" />
+      <workItem from="1718953210922" duration="5858000" />
     </task>
     <servers />
   </component>

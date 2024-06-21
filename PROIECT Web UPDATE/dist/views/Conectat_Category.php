@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once '../controllers/FavoriteController.php';
-require_once '../models/Database.php';
+require_once '../models/database.php';
 
 $database = Database::getInstance();
 $db = $database->getConnection();
