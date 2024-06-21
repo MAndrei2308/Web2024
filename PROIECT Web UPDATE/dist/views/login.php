@@ -1,39 +1,68 @@
 <?php
 session_start();
-include_once '../models/database.php';
 
-if($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $database = Database::getInstance();
-    $db = $database->getConnection();
-
-    $username = htmlspecialchars(strip_tags($_POST['username']));
-    $password = htmlspecialchars(strip_tags($_POST['password']));
-
-    if(!empty($username) && !empty($password)) {
-        $query = "SELECT * FROM Users WHERE username = :username";
-        $stmt = $db->prepare($query);
-        $stmt->bindParam(':username',$username);
-        $stmt->execute();
-
-        if($stmt->rowCount()>0) {
-            $row = $stmt->fetch(PDO::FETCH_ASSOC);
-            if(password_verify($password, $row['password_hash'])) {
-                $_SESSION['user_id'] = $row['user_id'];
-                $_SESSION['username'] = $row['username'];
-                header("Location: ../Conectat_Home.php");
-                exit();
-            } else {
-                $_SESSION['error'] = "Incorrect password!";
-            }
-        } else {
-            $_SESSION['error'] = "No user found!";
-        }
-    } else {
-        $_SESSION['error'] = "Please fill all fields!";
-    }
-
-    header("Location: ../Login.html");
+if (isset($_SESSION['user_id'])) {
+    header("Location: Conectat_Home.php");
+    exit();
 }
 
+$error_message = isset($_SESSION['error_message']) ? $_SESSION['error_message'] : '';
+unset($_SESSION['error_message']);
 
+$success_message = isset($_SESSION['success_message']) ? $_SESSION['success_message'] : '';
+unset($_SESSION['success_message']);
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/Login.css">
+</head>
+
+
+<body>
+<div class="login-container">
+    <h2>Login Form</h2>
+
+    <div class="pozaProfil">
+        <img src="../../img/img_profil.png" alt="profil">
+    </div>
+    <form action="../controllers/LoginController.php" method="post">
+        <label for="username"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="username" id="username" required>
+
+        <label for="password"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password" id="password" required>
+
+        <div class="check">
+            <input type="checkbox" name="rememberMe" id="rememberMe">
+            <label for="rememberMe">Remember me</label>
+        </div>
+
+        <button type="submit" class="submit">Login</button>
+        <div class="cancel-forgot">
+            <a href="PaginaPrincipala.php" class="cancelButton">Cancel</a>
+
+            <span class="password">Forgot <a href="ForgotPassword.php">password</a>? Or <a href="SignUp.php">sign up</a></span>
+        </div>
+    </form>
+
+    <?php if($error_message): ?>
+    <div class="error-message" style="color: red;">
+        <?php echo htmlspecialchars($error_message); ?>
+    </div>
+    <?php endif; ?>
+
+    <?php if($success_message): ?>
+    <div class="success_message" style="color: green;">
+        <?php echo htmlspecialchars($success_message); ?>
+    </div>
+    <?php endif; ?>
+
+</div>
+</body>
+
+</html>

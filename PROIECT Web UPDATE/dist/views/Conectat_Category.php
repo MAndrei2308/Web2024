@@ -3,6 +3,12 @@ session_start();
 require_once '../controllers/FavoriteController.php';
 require_once '../models/database.php';
 
+
+if (!isset($_SESSION['user_id'])) {
+    header("Location: Login.php");
+    exit();
+}
+
 $database = Database::getInstance();
 $db = $database->getConnection();
 $favoriteController = new FavoriteController();
@@ -38,13 +44,13 @@ while ($row = $allProducts->fetch(PDO::FETCH_ASSOC)) {
     <nav class="navbar">
         <ul class="navbar__links">
             <li class="navbar__links__item--link"><a href="Conectat_Home.php">Home</a></li>
-            <li class="navbar__links__item--link"><a href="../Conectat_VirtualMap.html">Virtual Map</a></li>
+            <li class="navbar__links__item--link"><a href="Conectat_VirtualMap.php">Virtual Map</a></li>
             <li class="navbar__links__item--link"><a href="Conectat_Category.php">Category</a></li>
         </ul>
     </nav>
     <div class="navbar__buttons">
         <input type="checkbox" id="user" class="user">
-        <label for="user" class="user-icon"><a href="../ProfilPagina.html"><img src="../../img/profile-user.png" alt="profile"></a></label>
+        <label for="user" class="user-icon"><a href="ProfilPagina.php"><img src="../../img/profile-user.png" alt="profile"></a></label>
     </div>
 </header>
 
@@ -107,8 +113,8 @@ while ($row = $allProducts->fetch(PDO::FETCH_ASSOC)) {
             <ul>
                 <li><a href="#">Terms of Use</a></li>
                 <li><a href="#">Privacy and Cookies Statement</a></li>
-                <li><a href="../Conectat_AboutUs.html">About us</a></li>
-                <li><a href="../Conectat_Help.html">Help</a></li>
+                <li><a href="Conectat_AboutUs.php">About us</a></li>
+                <li><a href="Conectat_Help.php">Help</a></li>
             </ul>
         </div>
     </div>

@@ -142,21 +142,5 @@ html {
     font-size: 50%;
   }
 }
-/* Stilurile adăugate pentru butoanele din coloana "Action" */
-.product-display-table td .btn {
-  display: block;
-  margin-bottom: 0.5rem;
-  width: 100%;
-}
-
-.product-display-table td .btn.edit {
-  background-color: var(--green);
-  color: var(--white);
-}
-
-.product-display-table td .btn.delete {
-  background-color: crimson;
-  color: var(--white);
-}
 
 /*# sourceMappingURL=AdminDesign.css.map */

@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['user_id'])) {
+    header("Location: Login.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,14 +27,14 @@
         <nav class="navbar">
             <ul class="navbar__links">
                 <li class="navbar__links__item--link"><a href="Conectat_Home.php">Home</a></li>
-                <li class="navbar__links__item--link"><a href="../Conectat_VirtualMap.html">Virtual Map</a></li>
+                <li class="navbar__links__item--link"><a href="Conectat_VirtualMap.php">Virtual Map</a></li>
                 <li class="navbar__links__item--link"><a href="Conectat_Category.php">Category</a></li>
             </ul>
         </nav>
         <div class="navbar__buttons">
 
             <input type="checkbox" id="user" class="user">
-            <label for="user" class="user-icon"><a href="../ProfilPagina.html"><img
+            <label for="user" class="user-icon"><a href="ProfilPagina.php"><img
                             src="../../img/profile-user.png" alt="profile"></a></label>
 
         </div>
@@ -37,14 +45,22 @@
     <div class="container">
         <img src="../../img/Principal.jpg" class="container__image" alt="imagineahome">
         <div class="container__overlay">
-            <form class="container__search-bar">
+            <form class="container__search-bar" action="FilteredProducts.php" method="POST">
                 <div class="container__search-bar__field">
-                    <label for="location">Location:</label>
-                    <input type="text" id="location" name="location" placeholder="Enter a location...">
+                    <label for="country">Country:</label>
+                    <select id="country" name="country">
+                        <option value="">Select a country...</option>
+                        <option value="Italy">Italy</option>
+                        <option value="Spain">Spain</option>
+                        <option value="France">France</option>
+                        <option value="Germany">Germany</option>
+                        <option value="Romania">Romania</option>
+                    </select>
                 </div>
                 <div class="container__search-bar__field">
                     <label for="period">Period:</label>
                     <select id="period" name="period">
+                        <option value="">Select a period...</option>
                         <option value="spring">Spring</option>
                         <option value="summer">Summer</option>
                         <option value="autumn">Autumn</option>
@@ -54,13 +70,13 @@
                 <div class="container__search-bar__field">
                     <label for="receiver">Receiver:</label>
                     <select id="receiver" name="receiver">
+                        <option value="">Select a receiver...</option>
                         <option value="Infant">Infant</option>
                         <option value="Toddler">Toddler</option>
                         <option value="Child">Child</option>
                         <option value="Adolescent">Adolescent</option>
                         <option value="Adult">Adult</option>
                         <option value="Elderly">Elderly</option>
-
                     </select>
                 </div>
                 <button type="submit" class="container__search-bar__button">Search</button>
@@ -89,8 +105,8 @@
                 <ul>
                     <li><a href="#">Terms of Use</a></li>
                     <li><a href="#">Privacy and Cookies Statement</a></li>
-                    <li><a href="../Conectat_AboutUs.html">About us</a></li>
-                    <li><a href="../Conectat_Help.html">Help</a></li>
+                    <li><a href="Conectat_AboutUs.php">About us</a></li>
+                    <li><a href="Conectat_Help.php">Help</a></li>
                 </ul>
             </div>
         </div>

@@ -45,6 +45,34 @@ class Product {
         $stmt = $this->db->query("SELECT * FROM products");
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    public function getFilteredProducts($country, $period, $receiver) {
+        $query = "SELECT * FROM products WHERE 1=1";
+        $params = [];
+
+        if (!empty($country)) {
+            $query .= " AND country = :country";
+            $params[':country'] = $country;
+        }
+
+        if (!empty($period)) {
+            $query .= " AND period = :period";
+            $params[':period'] = $period;
+        }
+
+        if (!empty($receiver)) {
+            $query .= " AND receiver = :receiver";
+            $params[':receiver'] = $receiver;
+        }
+
+        $stmt = $this->db->prepare($query);
+        foreach ($params as $key => &$val) {
+            $stmt->bindParam($key, $val);
+        }
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
 }
 
 ?>

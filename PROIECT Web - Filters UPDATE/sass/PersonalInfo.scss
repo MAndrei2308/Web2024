@@ -1,0 +1,54 @@
+/* Stiluri generale */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.personal-info-container {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.personal-info-container h2 {
+    text-align: center;
+}
+
+.personal-info-container form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.personal-info-container label {
+    margin-top: 10px;
+}
+
+.personal-info-container input, .personal-info-container select {
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 14px;
+}
+
+.personal-info-container .submit {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.personal-info-container .submit:hover {
+    background-color: #4cae4c;
+}
+
+.message {
+    color: red;
+    font-size: 1em;
+    text-align: center;
+    margin-bottom: 10px;
+}

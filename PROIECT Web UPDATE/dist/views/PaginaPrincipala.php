@@ -19,13 +19,13 @@
         <nav class="navbar">
             <ul class="navbar__links">
                 <li class="navbar__links__item--link"><a href="PaginaPrincipala.html">Home</a></li>
-                <li class="navbar__links__item--link"><a href="../VirtualMap.html">Virtual Map</a></li>
+                <li class="navbar__links__item--link"><a href="VirtualMap.php">Virtual Map</a></li>
                 <li class="navbar__links__item--link"><a href="Category.php">Category</a></li>
             </ul>
         </nav>
         <div class="navbar__buttons">
-            <a href="../Login.html" class="navbar__buttons--button">Login</a>
-            <a href="../SignUp.html" class="navbar__buttons--button">Sign Up</a>
+            <a href="Login.php" class="navbar__buttons--button">Login</a>
+            <a href="SignUp.php" class="navbar__buttons--button">Sign Up</a>
 
         </div>
     </header>
@@ -37,12 +37,20 @@
         <div class="container__overlay">
             <form class="container__search-bar">
                 <div class="container__search-bar__field">
-                    <label for="location">Location:</label>
-                    <input type="text" id="location" name="location" placeholder="Enter a location...">
+                    <label for="country">Country:</label>
+                    <select id="country" name="country">
+                        <option value="">Select a country...</option>
+                        <option value="Italy">Italy</option>
+                        <option value="Spain">Spain</option>
+                        <option value="France">France</option>
+                        <option value="Germany">Germany</option>
+                        <option value="Romania">Romania</option>
+                    </select>
                 </div>
                 <div class="container__search-bar__field">
                     <label for="period">Period:</label>
                     <select id="period" name="period">
+                        <option value="">Select a period...</option>
                         <option value="spring">Spring</option>
                         <option value="summer">Summer</option>
                         <option value="autumn">Autumn</option>
@@ -52,6 +60,7 @@
                 <div class="container__search-bar__field">
                     <label for="receiver">Receiver:</label>
                     <select id="receiver" name="receiver">
+                        <option value="">Select a receiver...</option>
                         <option value="Infant">Infant</option>
                         <option value="Toddler">Toddler</option>
                         <option value="Child">Child</option>
@@ -87,8 +96,8 @@
                 <ul>
                     <li><a href="#">Terms of Use</a></li>
                     <li><a href="#">Privacy and Cookies Statement</a></li>
-                    <li><a href="../AboutUs.html">About us</a></li>
-                    <li><a href="../Help.html">Help</a></li>
+                    <li><a href="AboutUs.php">About us</a></li>
+                    <li><a href="Help.php">Help</a></li>
                 </ul>
             </div>
         </div>
