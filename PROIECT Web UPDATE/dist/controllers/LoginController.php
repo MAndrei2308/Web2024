@@ -21,13 +21,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if (password_verify($password, $row['password_hash'])) {
                 $_SESSION['user_id'] = $row['user_id'];
                 $_SESSION['username'] = $row['username'];
+                $_SESSION['role'] = $row['role'];
 
                 // Set cookies
                 $cookie_duration = $rememberMe ? (30 * 24 * 60 * 60) : 0; // 30 days or 0
                 setcookie('user_id', $row['user_id'], time() + $cookie_duration, "/");
                 setcookie('username', $row['username'], time() + $cookie_duration, "/");
 
-                header("Location: ../views/Conectat_Home.php");
+                // Redirectionare pe baza rolului
+                if ($row['role'] == 'ADMIN') {
+                    header("Location: ../views/AdminPage.php");
+                } else {
+                    header("Location: ../views/Conectat_Home.php");
+                }
                 exit();
             }
         } else {
