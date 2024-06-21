@@ -142,5 +142,8 @@ html {
     font-size: 50%;
   }
 }
-
-/*# sourceMappingURL=AdminDesign.css.map */
+.export-buttons-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}/*# sourceMappingURL=AdminDesign.css.map */

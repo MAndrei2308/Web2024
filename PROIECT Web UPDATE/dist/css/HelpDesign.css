@@ -170,7 +170,8 @@ header .toggler-icon {
     right: 0;
     background: #7a766b;
     border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     text-align: center;
     /* Centrare orizontală */
     display: flex;
@@ -179,7 +180,8 @@ header .toggler-icon {
     align-items: center;
   }
   header #toggler:checked ~ .navbar {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
   header .navbar a {
     margin: 1.3rem;
@@ -264,7 +266,9 @@ header .toggler-icon {
   outline: none;
 }
 .container__search-bar__field select {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background-image: url('data:image/svg+xml;utf8,<svg fill="%23282c34" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
   background-repeat: no-repeat;
   background-position: right 1rem center;
@@ -301,6 +305,4 @@ html {
   padding: 0;
   box-sizing: border-box;
   transition: 0.2s linear;
-}
-
-/*# sourceMappingURL=HelpDesign.css.map */
+}/*# sourceMappingURL=HelpDesign.css.map */

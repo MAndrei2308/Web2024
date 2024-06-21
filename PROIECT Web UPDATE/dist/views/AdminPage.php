@@ -10,6 +10,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } elseif (isset($_POST['update_product'])) {
         $id = $_GET['edit'];
         $message = $productController->updateProduct($id);
+    } elseif (isset($_POST['export_html'])) {
+        $productController->exportProducts('html');
+    } elseif (isset($_POST['export_csv'])) {
+        $productController->exportProducts('csv');
+    } elseif (isset($_POST['export_json'])) {
+        $productController->exportProducts('json');
+    } elseif (isset($_POST['export_xml'])) {
+        $productController->exportProducts('xml');
     }
 }
 
@@ -94,6 +102,16 @@ $products = $productController->getProducts();
             </form>
         <?php endif; ?>
     </div>
+
+    <div class="export-buttons-container">
+        <form action="AdminPage.php" method="post" class="export-buttons">
+            <button type="submit" name="export_html" class="btn">Export HTML</button>
+            <button type="submit" name="export_csv" class="btn">Export CSV</button>
+            <button type="submit" name="export_json" class="btn">Export JSON</button>
+            <button type="submit" name="export_xml" class="btn">Export XML</button>
+        </form>
+    </div>
+
     <div class="product-display-table">
         <table>
             <thead>
