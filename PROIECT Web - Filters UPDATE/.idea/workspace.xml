@@ -20,6 +20,9 @@
       </list>
     </option>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/sass/Conectat_CategoryDesign.scss" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="PhpDebugGeneral" listening_started="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -29,31 +32,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "JavaScript Debug.AboutUs.html.executor": "Run",
-    "JavaScript Debug.Category.html.executor": "Run",
-    "JavaScript Debug.Conectat_Category.html.executor": "Run",
-    "JavaScript Debug.Conectat_Home.html.executor": "Run",
-    "JavaScript Debug.Documentatie.html.executor": "Run",
-    "JavaScript Debug.FavoritePagina.html.executor": "Run",
-    "JavaScript Debug.Help.html.executor": "Run",
-    "JavaScript Debug.Login.html.executor": "Run",
-    "JavaScript Debug.PaginaPrincipala.html.executor": "Run",
-    "JavaScript Debug.ProfilPagina.html.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Gabriela/Documents/Git Web/Web2024/PROIECT Web/PROIECT Web - Copy",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "watcher.settings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript Debug.AboutUs.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.Category.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.Conectat_Category.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.Conectat_Help.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.Conectat_Home.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.Conectat_VirtualMap.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.Documentatie.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.FavoritePagina.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.Help.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.Login.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.PaginaPrincipala.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.ProfilPagina.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.VirtualMap.html.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Gabriela/Documents/PROIECT Web/dist/css&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;watcher.settings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -97,6 +104,10 @@
       <workItem from="1713075450178" duration="592000" />
       <workItem from="1713180851445" duration="6909000" />
       <workItem from="1713187817717" duration="9036000" />
+      <workItem from="1715326934540" duration="12994000" />
+      <workItem from="1715352010129" duration="655000" />
+      <workItem from="1715352685271" duration="4548000" />
+      <workItem from="1715436265368" duration="1369000" />
     </task>
     <servers />
   </component>
