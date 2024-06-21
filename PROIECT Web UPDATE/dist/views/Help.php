@@ -18,9 +18,9 @@
 
         <nav class="navbar">
             <ul class="navbar__links">
-                <li class="navbar__links__item--link"><a href="PaginaPrincipala.php">Home</a></li>
-                <li class="navbar__links__item--link"><a href="VirtualMap.php">Virtual Map</a></li>
-                <li class="navbar__links__item--link"><a href="Category.php">Category</a></li>
+                <li class="navbar__links__item--link"><a href="../controllers/HomeController.php">Home</a></li>
+                <li class="navbar__links__item--link"><a href="../controllers/HomeController.php">Virtual Map</a></li>
+                <li class="navbar__links__item--link"><a href="../controllers/HomeController.php">Category</a></li>
             </ul>
         </nav>
         <div class="navbar__buttons">
@@ -73,8 +73,8 @@
                 <ul>
                     <li><a href="#">Terms of Use</a></li>
                     <li><a href="#">Privacy and Cookies Statement</a></li>
-                    <li><a href="AboutUs.php">About us</a></li>
-                    <li><a href="Help.php">Help</a></li>
+                    <li><a href="../controllers/AboutUsController.php">About us</a></li>
+                    <li><a href="../controllers/HelpController.php">Help</a></li>
                 </ul>
             </div>
         </div>

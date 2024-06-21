@@ -18,9 +18,9 @@
 
         <nav class="navbar">
             <ul class="navbar__links">
-                <li class="navbar__links__item--link"><a href="PaginaPrincipala.html">Home</a></li>
-                <li class="navbar__links__item--link"><a href="VirtualMap.php">Virtual Map</a></li>
-                <li class="navbar__links__item--link"><a href="Category.php">Category</a></li>
+                <li class="navbar__links__item--link"><a href="../controllers/HomeController.php">Home</a></li>
+                <li class="navbar__links__item--link"><a href="../controllers/VirtualMapController.php">Virtual Map</a></li>
+                <li class="navbar__links__item--link"><a href="../controllers/CategoryController.php">Category</a></li>
             </ul>
         </nav>
         <div class="navbar__buttons">
@@ -35,7 +35,7 @@
     <div class="container">
         <img src="../../img/Principal.jpg" class="container__image" alt="imaginea home">
         <div class="container__overlay">
-            <form class="container__search-bar">
+            <form class="container__search-bar" action="FilteredProducts.php" method="POST">
                 <div class="container__search-bar__field">
                     <label for="country">Country:</label>
                     <select id="country" name="country">
@@ -96,8 +96,8 @@
                 <ul>
                     <li><a href="#">Terms of Use</a></li>
                     <li><a href="#">Privacy and Cookies Statement</a></li>
-                    <li><a href="AboutUs.php">About us</a></li>
-                    <li><a href="Help.php">Help</a></li>
+                    <li><a href="../controllers/AboutUsController.php">About us</a></li>
+                    <li><a href="../controllers/HelpController.php">Help</a></li>
                 </ul>
             </div>
         </div>

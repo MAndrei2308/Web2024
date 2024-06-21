@@ -8,12 +8,12 @@ if (!isset($_SESSION['user_id']) && isset($_COOKIE['user_id'])) {
 }
 
 if (isset($_SESSION['user_id'])) {
-    // Utilizatorul este autentificat, redirectioneaza catre pagina help conectata
-    header("Location: ../views/Conectat_Help.php");
+    // Utilizatorul este autentificat, redirectioneaza catre pagina de about conectata
+    header("Location: ../views/Conectat_Category.php");
     exit();
 } else {
-    // Utilizatorul este autentificat, redirectioneaza catre pagina help neconectata
-    header("Location: ../views/Help.php");
+    // Utilizatorul este autentificat, redirectioneaza catre pagina de about neconectata
+    header("Location: ../views/Category.php");
     exit();
 }
 ?>
