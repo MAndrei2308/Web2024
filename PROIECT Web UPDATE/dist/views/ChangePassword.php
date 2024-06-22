@@ -12,17 +12,20 @@ session_start();
 <body>
     <div class="forgot-password-container">
         <h2>Change Password</h2>
-        <form action="changePassword.php" method="post">
+        <form action="../controllers/ChangePasswordController.php" method="post">
             <input type="password" placeholder="Enter your previous password" name="old_pass" id="old_pass" required>
             <input type="password" placeholder="Enter your new password" name="new_pass" id="new_pass" required>
-            <input type="password" placeholder="Confirm your new password" name="new_pass" id="new_pass" required>
+            <input type="password" placeholder="Confirm your new password" name="conf_new_pass" id="conf_new_pass" required>
             
             <button type="submit" class="submit">Change password</button>
         </form>
 
         <?php if(isset($_SESSION['message'])): ?>
             <div class="message">
-                <?php echo htmlspecialchars($_SESSION['message']); unset($_SESSION['message']); ?>
+                <?php 
+                    echo htmlspecialchars($_SESSION['message']); 
+                    unset($_SESSION['message']); 
+                ?>
             </div>
         <?php endif; ?>
     </div>

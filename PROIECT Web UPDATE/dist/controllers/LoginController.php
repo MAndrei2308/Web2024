@@ -35,7 +35,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     header("Location: ../views/Conectat_Home.php");
                 }
                 exit();
+            } else {
+                $_SESSION['error_message'] = "No user found!";
+                header("Location: ../views/Login.php");
+                exit();
             }
+
         } else {
             $_SESSION['error_message'] = "No user found!";
             header("Location: ../views/Login.php");
