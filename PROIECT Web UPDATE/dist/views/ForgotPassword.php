@@ -12,7 +12,7 @@ session_start();
 <body>
     <div class="forgot-password-container">
         <h2>Forgot Password</h2>
-        <form action="sendResetEmail.php" method="post">
+        <form action="../controllers/SendResetEmail.php" method="post">
             <input type="email" placeholder="Enter your email address" name="email" id="email" required>
             <button type="submit" class="submit">Send Reset Link</button>
         </form>
