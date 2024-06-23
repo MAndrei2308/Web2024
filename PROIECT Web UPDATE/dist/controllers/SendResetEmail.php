@@ -27,8 +27,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $subject = "Reset Your Password";
         $message = "Click on the following link to reset your password: $reset_link";
         $headers = 'From: andrei.moisa.23@gmail.com' . "\r\n" .
-    'Reply-To: andrei.moisa.23@gmail.com' . "\r\n" .
-    'X-Mailer: PHP/' . phpversion();
+            'Reply-To: andrei.moisa.23@gmail.com' . "\r\n" .
+            'X-Mailer: PHP/' . phpversion();
 
         // Trimiterea e-mailului
         if (mail($email, $subject, $message, $headers)) {
