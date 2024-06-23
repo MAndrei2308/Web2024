@@ -31,11 +31,8 @@ if (!isset($_SESSION['user_id'])) {
             </ul>
         </nav>
         <div class="navbar__buttons">
-
             <input type="checkbox" id="user" class="user">
-            <label for="user" class="user-icon"><a href="../controllers/ProfilController.php"><img src="../../img/profile-user.png" alt="profile">
-                </a></label>
-
+            <label for="user" class="user-icon"><a href="../controllers/ProfilController.php"><img src="../../img/profile-user.png" alt="profile"></a></label>
         </div>
     </header>
     <section class="about-us">

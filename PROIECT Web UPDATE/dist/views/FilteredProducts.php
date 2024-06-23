@@ -30,9 +30,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <label for="toggler" class="toggler-icon">☰</label>
     <nav class="navbar">
         <ul class="navbar__links">
-            <li class="navbar__links__item--link"><a href="PaginaPrincipala.php">Home</a></li>
-            <li class="navbar__links__item--link"><a href="VirtualMap.php">Virtual Map</a></li>
-            <li class="navbar__links__item--link"><a href="Category.php">Category</a></li>
+            <li class="navbar__links__item--link"><a href="../controllers/HomeController.php">Home</a></li>
+            <li class="navbar__links__item--link"><a href="../controllers/VirtualMapController.php">Virtual Map</a></li>
+            <li class="navbar__links__item--link"><a href="../controllers/CategoryController.php">Category</a></li>
         </ul>
     </nav>
     <div class="navbar__buttons">
@@ -47,7 +47,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <?php if ($message) echo '<span class="message">' . $message . '</span>'; ?>
 
     <div class="souvenirs__box-container" >
-        <?php foreach ($products as $product): ?>
+        <?php if(empty($products)){?>
+            <h1 class="message-heading"> No products found !! </h1>
+        <?php }
+            foreach ($products as $product): ?>
             <div class="souvenirs__box" onclick="location.href='ProductDetail.php?id=<?php echo htmlspecialchars($product['id']); ?>'">
                 <div class="heart-label">
                     <span class="heart-icon"></span>
@@ -84,8 +87,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <ul>
                 <li><a href="#">Terms of Use</a></li>
                 <li><a href="#">Privacy and Cookies Statement</a></li>
-                <li><a href="AboutUs.php">About us</a></li>
-                <li><a href="Help.php">Help</a></li>
+                <li><a href="../controllers/AboutUsController.php">About us</a></li>
+                <li><a href="../controllers/HelpController.php">Help</a></li>
             </ul>
         </div>
     </div>
