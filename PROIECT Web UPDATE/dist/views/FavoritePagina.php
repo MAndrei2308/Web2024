@@ -31,15 +31,15 @@ $favorites = $favoriteController->getUserFavorites($userId);
 
     <nav class="navbar">
         <ul class="navbar__links">
-            <li class="navbar__links__item--link"><a href="../controllers/HomeController.php">Home</a></li>
-            <li class="navbar__links__item--link"><a href="../controllers/VirtualMapController.php">Virtual Map</a></li>
-            <li class="navbar__links__item--link"><a href="../controllers/CategoryController.php">Category</a></li>
+            <li class="navbar__links__item--link"><a href="Conectat_Home.php">Home</a></li>
+            <li class="navbar__links__item--link"><a href="Conectat_VirtualMap.php">Virtual Map</a></li>
+            <li class="navbar__links__item--link"><a href="Conectat_Category.php">Category</a></li>
         </ul>
     </nav>
     <div class="navbar__buttons">
 
         <input type="checkbox" id="user" class="user">
-        <label for="user" class="user-icon"><a href="../controllers/ProfilController.php"><img src="../../img/profile-user.png" alt="profile">
+        <label for="user" class="user-icon"><a href="ProfilPagina.php"><img src="../../img/profile-user.png" alt="profile">
             </a></label>
 
     </div>
@@ -94,8 +94,8 @@ $favorites = $favoriteController->getUserFavorites($userId);
             <ul>
                 <li><a href="#">Terms of Use</a></li>
                 <li><a href="#">Privacy and Cookies Statement</a></li>
-                <li><a href="../controllers/AboutUsController.php">About us</a></li>
-                <li><a href="../controllers/HelpController.php">Help</a></li>
+                <li><a href="Conectat_AboutUs.php">About us</a></li>
+                <li><a href="Conectat_Help.php">Help</a></li>
             </ul>
         </div>
     </div>

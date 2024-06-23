@@ -91,8 +91,7 @@ nav a img {
 .profile__info {
   border-width: 1px;
   border-style: solid;
-  -o-border-image: linear-gradient(to right, #95AE74, rgba(126, 211, 134, 0.5)) 1 0%;
-     border-image: linear-gradient(to right, #95AE74, rgba(126, 211, 134, 0.5)) 1 0%;
+  border-image: linear-gradient(to right, #95AE74, rgba(126, 211, 134, 0.5)) 1 0%;
   border-top: 0;
   width: 80%;
   font-family: "Verdana", sans-serif;
@@ -138,4 +137,6 @@ nav a img {
   html {
     font-size: 50%;
   }
-}/*# sourceMappingURL=ProfilPaginaDesign.css.map */
+}
+
+/*# sourceMappingURL=ProfilPaginaDesign.css.map */

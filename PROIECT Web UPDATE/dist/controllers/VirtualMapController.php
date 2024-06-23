@@ -9,11 +9,11 @@ if (!isset($_SESSION['user_id']) && isset($_COOKIE['user_id'])) {
 
 if (isset($_SESSION['user_id'])) {
     // Utilizatorul este autentificat, redirectioneaza catre pagina virual map conectata
-    header("Location: ../views/Conectat_VirtualMap.php");
+    header("Location: ../Conectat_VirtualMap.php");
     exit();
 } else {
     // Utilizatorul este autentificat, redirectioneaza catre pagina virtual map neconectata
-    header("Location: ../views/VirtualMap.php");
+    header("Location: ../VirtualMap.php");
     exit();
 }
 ?>

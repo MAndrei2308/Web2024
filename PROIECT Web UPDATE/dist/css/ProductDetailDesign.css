@@ -116,7 +116,6 @@ header .logo span {
 .navbar__links {
   list-style: none;
   display: flex;
-  margin-left: 0px;
 }
 .navbar__links__item--link a {
   font-weight: 700;
@@ -178,8 +177,7 @@ header .toggler-icon {
     right: 0;
     background: #7a766b;
     border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     text-align: center;
     /* Centrare orizontală */
     display: flex;
@@ -188,8 +186,7 @@ header .toggler-icon {
     align-items: center;
   }
   header #toggler:checked ~ .navbar {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
   header .navbar a {
     margin: 1.3rem;
@@ -287,4 +284,6 @@ html {
     height: 300px;
     margin-top: 1rem;
   }
-}/*# sourceMappingURL=ProductDetail.css.map */
+}
+
+/*# sourceMappingURL=ProductDetailDesign.css.map */

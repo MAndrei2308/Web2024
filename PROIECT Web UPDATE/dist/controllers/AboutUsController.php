@@ -9,11 +9,11 @@ if (!isset($_SESSION['user_id']) && isset($_COOKIE['user_id'])) {
 
 if (isset($_SESSION['user_id'])) {
     // Utilizatorul este autentificat, redirectioneaza catre pagina de about conectata
-    header("Location: ../views/Conectat_AboutUs.php");
+    header("Location: ../Conectat_AboutUs.php");
     exit();
 } else {
     // Utilizatorul este autentificat, redirectioneaza catre pagina de about neconectata
-    header("Location: ../views/AboutUs.php");
+    header("Location: ../AboutUs.php");
     exit();
 }
 ?>

@@ -1,40 +1,38 @@
 <?php
 session_start();
+require_once '../controllers/ProductFilterController.php';
 require_once '../controllers/FavoriteController.php';
-require_once '../models/database.php';
-
 
 if (!isset($_SESSION['user_id'])) {
     header("Location: Login.php");
     exit();
 }
 
-$database = Database::getInstance();
-$db = $database->getConnection();
+$productFilterController = new ProductFilterController();
 $favoriteController = new FavoriteController();
 $userId = $_SESSION['user_id'];
 
-// Selectăm toate produsele pentru a le afișa pe pagina
-$sql = "SELECT * FROM Products ORDER BY country";
-$allProducts = $db->query($sql);
+$products = [];
+$message = '';
 
-$productsByCountry = [];
-while ($row = $allProducts->fetch(PDO::FETCH_ASSOC)) {
-    $productsByCountry[$row['country']][] = $row;
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $products = $productFilterController->filterProducts();
+    if (is_string($products)) {
+        $message = $products;
+        $products = [];
+    }
 }
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Filtered Products</title>
     <link rel="stylesheet" href="../css/Conectat_CategoryDesign.css">
-    <title>Category</title>
 </head>
-
 <body>
 <header>
     <div class="logo"><img src="../../img/Logo.png" alt="logo">Souvenirs<span>.</span></div>
@@ -50,46 +48,33 @@ while ($row = $allProducts->fetch(PDO::FETCH_ASSOC)) {
     </nav>
     <div class="navbar__buttons">
         <input type="checkbox" id="user" class="user">
-        <label for="user" class="user-icon"><a href="ProfilPagina.php"><img src="../../img/profile-user.png" alt="profile"></a></label>
+        <label for="user" class="user-icon"><a href="../controllers/ProfilController.php"><img src="../../img/profile-user.png" alt="profile"></a></label>
     </div>
 </header>
 
 <section class="souvenirs" id="souvenirs">
-    <h1 class="heading"><span class="heading__highlight">Souvenir</span> Products</h1>
+    <h1 class="heading"><span class="heading__highlight">Filtered</span> Products</h1>
 
-    <nav class="toc">
-        <h2>Cuprins</h2>
-        <ul>
-            <?php foreach (array_keys($productsByCountry) as $country): ?>
-                <li><a href="#<?php echo strtolower(htmlspecialchars($country)); ?>"><?php echo htmlspecialchars($country); ?></a></li>
-            <?php endforeach; ?>
-        </ul>
-    </nav>
+    <?php if ($message) echo '<span class="message">' . $message . '</span>'; ?>
 
-    <?php foreach ($productsByCountry as $country => $products): ?>
-        <h2 class="country" id="<?php echo strtolower(htmlspecialchars($country)); ?>"><?php echo htmlspecialchars($country); ?></h2>
-        <div class="souvenirs__box-container">
-            <?php foreach ($products as $product): ?>
-                <div class="souvenirs__box">
-                    <form action="../endpoints/handle_favorite.php" method="POST" class="favorite-form">
-                        <input type="hidden" name="product_id" value="<?php echo htmlspecialchars($product['id']); ?>">
-                        <button type="button" class="heart-checkbox" onclick="toggleFavorite(<?php echo htmlspecialchars($product['id']); ?>, this)">
-                            <div class="heart-icon <?php echo $favoriteController->isFavorite($userId, $product['id']) ? 'heart-icon-red' : ''; ?>"></div>
-                        </button>
-
-                    </form>
-
-                    <div class="souvenirs__image" onclick="location.href='Conectat_ProductDetail.php?id=<?php echo htmlspecialchars($product['id']); ?>'">
-                        <img src="uploaded_img/<?php echo htmlspecialchars($product['image']); ?>" alt="souvenir">
-                    </div>
-
-                    <div class="souvenirs__content">
-                        <h3><?php echo htmlspecialchars($product['name']); ?></h3>
-                    </div>
+    <div class="souvenirs__box-container">
+        <?php foreach ($products as $product): ?>
+            <div class="souvenirs__box">
+                <form action="../endpoints/handle_favorite.php" method="POST" class="favorite-form">
+                    <input type="hidden" name="product_id" value="<?php echo htmlspecialchars($product['id']); ?>">
+                    <button type="button" class="heart-checkbox" onclick="toggleFavorite(<?php echo htmlspecialchars($product['id']); ?>, this)">
+                        <div class="heart-icon <?php echo $favoriteController->isFavorite($userId, $product['id']) ? 'heart-icon-red' : ''; ?>"></div>
+                    </button>
+                </form>
+                <div class="souvenirs__image" onclick="location.href='ProductDetail.php?id=<?php echo htmlspecialchars($product['id']); ?>'">
+                    <img src="uploaded_img/<?php echo $product['image']; ?>" alt="souvenir">
                 </div>
-            <?php endforeach; ?>
-        </div>
-    <?php endforeach; ?>
+                <div class="souvenirs__content">
+                    <h3><?php echo htmlspecialchars($product['name']); ?></h3>
+                </div>
+            </div>
+        <?php endforeach; ?>
+    </div>
 </section>
 
 <footer class="footer">
@@ -113,8 +98,8 @@ while ($row = $allProducts->fetch(PDO::FETCH_ASSOC)) {
             <ul>
                 <li><a href="#">Terms of Use</a></li>
                 <li><a href="#">Privacy and Cookies Statement</a></li>
-                <li><a href="Conectat_AboutUs.php">About us</a></li>
-                <li><a href="Conectat_Help.php">Help</a></li>
+                <li><a href="AboutUs.php">About us</a></li>
+                <li><a href="Help.php">Help</a></li>
             </ul>
         </div>
     </div>
@@ -122,6 +107,7 @@ while ($row = $allProducts->fetch(PDO::FETCH_ASSOC)) {
         <p>&copy; 2024 Souvenirs. All rights reserved.</p>
     </div>
 </footer>
+
 <script>
     function toggleFavorite(productId, button) {
         var userId = <?php echo isset($_SESSION['user_id']) ? intval($_SESSION['user_id']) : 0; ?>;
@@ -153,7 +139,5 @@ while ($row = $allProducts->fetch(PDO::FETCH_ASSOC)) {
     }
 </script>
 
-
 </body>
-
 </html>

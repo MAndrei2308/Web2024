@@ -2,7 +2,7 @@
 session_start();
 
 if (isset($_SESSION['user_id'])) {
-    header("Location: ../controllers/HomeController.php");
+    header("Location: Conectat_Home.php");
     exit();
 }
 
@@ -44,7 +44,7 @@ unset($_SESSION['success_message']);
 
         <button type="submit" class="submit">Login</button>
         <div class="cancel-forgot">
-            <a href="../controllers/HomeController.php" class="cancelButton">Cancel</a>
+            <a href="PaginaPrincipala.php" class="cancelButton">Cancel</a>
 
             <span class="password">Forgot <a href="ForgotPassword.php">password</a>? Or <a href="SignUp.php">sign up</a></span>
         </div>

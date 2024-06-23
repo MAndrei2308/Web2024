@@ -29,10 +29,17 @@ class Product {
     }
 
     public function deleteProduct($id) {
+        // First, delete comments related to the product
+        $commentStmt = $this->db->prepare("DELETE FROM comments WHERE product_id = :id");
+        $commentStmt->bindParam(':id', $id);
+        $commentStmt->execute();
+
+        // Now delete the product itself
         $stmt = $this->db->prepare("DELETE FROM products WHERE id = :id");
         $stmt->bindParam(':id', $id);
         return $stmt->execute();
     }
+
 
     public function getProductById($id) {
         $stmt = $this->db->prepare("SELECT * FROM products WHERE id = :id");

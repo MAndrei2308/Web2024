@@ -60,7 +60,7 @@ header .logo span {
   &__links {
     list-style: none;
     display: flex;
-    margin-left: 0px;
+
 
     &__item {
       &--link a {
@@ -78,24 +78,28 @@ header .logo span {
   }
 
   &__buttons {
+    position: relative;
+    margin-right: 8.6rem;
 
-    &--button {
-      font-weight: weight(bold);
+    #user {
+      display: none;
+    }
+
+    img {
       padding: 1rem 1.5rem;
-      font-size: 1rem;
       margin-left: 10px;
-      border: none;
       border-radius: 25px;
+      border: none;
       cursor: pointer;
       transition: background-color 0.3s ease;
-      background-color: white;
-      text-decoration: none;
-      color: black;
+
 
       &:hover {
         background-color: #9f9d9d;
+
       }
     }
+
   }
 }
 
@@ -250,4 +254,73 @@ html {
     height: 300px;
     margin-top: 1rem;
   }
+}
+/* Stilizarea secțiunii de comentarii */
+
+.comments-section {
+  margin-top: 3rem;
+}
+
+.comments-section h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+
+.comments-section #comments {
+  margin-bottom: 20px;
+}
+
+.comments-section .comment {
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding: 1rem;
+}
+
+.comments-section .comment small {
+  display: block;
+  color: #666;
+  margin-top: 5px;
+}
+
+.comments-section form {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 80rem 1rem 1rem;
+}
+
+.comments-section form textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.comments-section form .submit-button {
+  align-self: flex-end;
+  padding: 10px 20px;
+  border: none;
+  background-color: #509377;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.comments-section form .submit-button:hover {
+  background-color: #417562;
+}
+
+.comment .delete-comment {
+  background-color: #6599af;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  margin-left: 96rem;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.comment .delete-comment:hover {
+  background-color: #5a8698;
 }

@@ -21,24 +21,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filtered Products</title>
-    <link rel="stylesheet" href="../css/Conectat_CategoryDesign.css">
+    <link rel="stylesheet" href="../css/CategoryDesign.css">
 </head>
 <body>
 <header>
     <div class="logo"><img src="../../img/Logo.png" alt="logo">Souvenirs<span>.</span></div>
     <input type="checkbox" id="toggler" class="toggler">
     <label for="toggler" class="toggler-icon">☰</label>
-
     <nav class="navbar">
         <ul class="navbar__links">
-            <li class="navbar__links__item--link"><a href="../controllers/HomeController.php">Home</a></li>
-            <li class="navbar__links__item--link"><a href="../controllers/VirtualMapController.php">Virtual Map</a></li>
-            <li class="navbar__links__item--link"><a href="../controllers/CategoryController.php">Category</a></li>
+            <li class="navbar__links__item--link"><a href="PaginaPrincipala.php">Home</a></li>
+            <li class="navbar__links__item--link"><a href="VirtualMap.php">Virtual Map</a></li>
+            <li class="navbar__links__item--link"><a href="Category.php">Category</a></li>
         </ul>
     </nav>
     <div class="navbar__buttons">
-        <input type="checkbox" id="user" class="user">
-        <label for="user" class="user-icon"><a href="../controllers/ProfilController.php"><img src="../../img/profile-user.png" alt="profile"></a></label>
+        <a href="Login.php" class="navbar__buttons--button">Login</a>
+        <a href="SignUp.php" class="navbar__buttons--button">Sign Up</a>
     </div>
 </header>
 
@@ -47,9 +46,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <?php if ($message) echo '<span class="message">' . $message . '</span>'; ?>
 
-    <div class="souvenirs__box-container">
+    <div class="souvenirs__box-container" >
         <?php foreach ($products as $product): ?>
-            <div class="souvenirs__box">
+            <div class="souvenirs__box" onclick="location.href='ProductDetail.php?id=<?php echo htmlspecialchars($product['id']); ?>'">
                 <div class="heart-label">
                     <span class="heart-icon"></span>
                 </div>
@@ -85,8 +84,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <ul>
                 <li><a href="#">Terms of Use</a></li>
                 <li><a href="#">Privacy and Cookies Statement</a></li>
-                <li><a href="../controllers/AboutUsController.php">About us</a></li>
-                <li><a href="../controllers/HelpController.php">Help</a></li>
+                <li><a href="AboutUs.php">About us</a></li>
+                <li><a href="Help.php">Help</a></li>
             </ul>
         </div>
     </div>

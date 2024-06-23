@@ -1,14 +1,21 @@
 <?php
+session_start();
 require_once '../controllers/DetailController.php';
 
+
+// Verificăm dacă există un id de produs în parametrii GET
 if (!isset($_GET['id'])) {
     echo "No product ID provided.";
     exit;
 }
 
+// Inițializăm controller-ii
 $detailController = new DetailController();
+
+
+// Preluăm detalii despre produs și comentariile asociate
 $product = $detailController->getProductDetail(intval($_GET['id']));
-$country = $product['country'];
+
 
 $countryCoordinates = [
     'Italy' => [41.87194, 12.56738],
@@ -18,7 +25,7 @@ $countryCoordinates = [
     'Romania' => [45.943161, 24.96676]
 ];
 
-$coordinates = isset($countryCoordinates[$country]) ? $countryCoordinates[$country] : [0, 0];
+$coordinates = isset($countryCoordinates[$product['country']]) ? $countryCoordinates[$product['country']] : [0, 0];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,9 +33,10 @@ $coordinates = isset($countryCoordinates[$country]) ? $countryCoordinates[$count
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Detail</title>
-    <link rel="stylesheet" href="../css/ProductDetail.css">
+    <link rel="stylesheet" href="../css/ProductDetailDesign.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 <header>
@@ -37,9 +45,9 @@ $coordinates = isset($countryCoordinates[$country]) ? $countryCoordinates[$count
     <label for="toggler" class="toggler-icon">☰</label>
     <nav class="navbar">
         <ul class="navbar__links">
-            <li class="navbar__links__item--link"><a href="../controllers/HomeController.php">Home</a></li>
-            <li class="navbar__links__item--link"><a href="../controllers/VirtualMapController.php">Virtual Map</a></li>
-            <li class="navbar__links__item--link"><a href="../controllers/CategoryController.php">Category</a></li>
+            <li class="navbar__links__item--link"><a href="PaginaPrincipala.php">Home</a></li>
+            <li class="navbar__links__item--link"><a href="VirtualMap.php">Virtual Map</a></li>
+            <li class="navbar__links__item--link"><a href="Category.php">Category</a></li>
         </ul>
     </nav>
     <div class="navbar__buttons">
@@ -47,16 +55,20 @@ $coordinates = isset($countryCoordinates[$country]) ? $countryCoordinates[$count
         <a href="SignUp.php" class="navbar__buttons--button">Sign Up</a>
     </div>
 </header>
+
 <div class="product-detail">
     <div class="product-image">
         <img src="uploaded_img/<?php echo $product['image']; ?>" alt="<?php echo $product['name']; ?>">
     </div>
     <div class="product-info">
         <h1><?php echo $product['name']; ?></h1>
-        <p>descriere produs......</p>
+        <p>Period: <?php echo $product['period']; ?></p>
+        <p>Receiver: <?php echo $product['receiver']; ?></p>
     </div>
     <div id="map"></div>
 </div>
+
+
 <footer class="footer">
     <div class="footer__content">
         <div class="footer__column">
@@ -78,8 +90,8 @@ $coordinates = isset($countryCoordinates[$country]) ? $countryCoordinates[$count
             <ul>
                 <li><a href="#">Terms of Use</a></li>
                 <li><a href="#">Privacy and Cookies Statement</a></li>
-                <li><a href="../controllers/AboutUsController.php">About us</a></li>
-                <li><a href="../controllers/HelpController.php">Help</a></li>
+                <li><a href="AboutUs.php">About us</a></li>
+                <li><a href="Help.php">Help</a></li>
             </ul>
         </div>
     </div>
@@ -87,6 +99,7 @@ $coordinates = isset($countryCoordinates[$country]) ? $countryCoordinates[$count
         <p>&copy; 2024 Souvenirs. All rights reserved.</p>
     </div>
 </footer>
+
 <script>
     var map = L.map('map').setView([<?php echo $coordinates[0]; ?>, <?php echo $coordinates[1]; ?>], 5);
 
@@ -95,8 +108,11 @@ $coordinates = isset($countryCoordinates[$country]) ? $countryCoordinates[$count
     }).addTo(map);
 
     L.marker([<?php echo $coordinates[0]; ?>, <?php echo $coordinates[1]; ?>]).addTo(map)
-        .bindPopup('<?php echo $country; ?>')
+        .bindPopup('<?php echo $product['country']; ?>')
         .openPopup();
+
+
 </script>
+
 </body>
 </html>
