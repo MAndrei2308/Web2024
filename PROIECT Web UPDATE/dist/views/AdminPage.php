@@ -1,6 +1,18 @@
 <?php
 require_once '../controllers/ProductController.php';
 
+session_start();
+
+if (!isset($_SESSION['user_id'])) {
+    header('Location: Login.php');
+    exit();
+} else {
+    if($_SESSION['role']!=='ADMIN') {
+        header('Location: ../controllers/HomeController.php');
+        exit();
+    }
+}
+
 $productController = new ProductController();
 $message = '';
 
@@ -37,6 +49,13 @@ $products = $productController->getProducts();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Page</title>
     <link rel="stylesheet" href="../css/AdminDesign.css">
+
+    <script>
+        window.addEventListener("beforeunload", function (event) {
+            // Send a beacon to logout.php when the page is unloaded
+            navigator.sendBeacon("../controllers/LogoutController.php");
+        });
+    </script>
 </head>
 <body>
 <?php if ($message) echo '<span class="message">' . $message . '</span>'; ?>

@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $passwordResetModel->storeResetToken($user['user_id'], $token, $expiry_time);
 
         // Trimitem e-mailul de resetare
-        $reset_link = "https://localhost/PROIECT%20Web%20UPDATE%20andrei/dist/views/ResetPassword.php?token=$token";
+        $reset_link = "http://localhost/PROIECT%20Web%20UPDATE%20-%20Copy/dist/views/ResetPassword.php?token=$token";
         $subject = "Reset Your Password";
         $message = "Click on the following link to reset your password: $reset_link";
         $headers = 'From: andrei.moisa.23@gmail.com' . "\r\n" .
@@ -33,6 +33,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Trimiterea e-mailului
         if (mail($email, $subject, $message, $headers)) {
             $_SESSION['message'] = "A reset link has been sent to your email address.";
+            header('Location: ../views/Login.php');
+            exit();
         } else {
             $_SESSION['message'] = "Failed to send email.";
         }

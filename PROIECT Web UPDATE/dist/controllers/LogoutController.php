@@ -9,10 +9,10 @@ $_SESSION = array();
 session_destroy();
 
 // Delete cookies
-setcookie('user_id', '', time()-3600, "/");
-setcookie('username', '', time()-3600, "/");
+setcookie('user_id', '', time() - 3600, "/");
+setcookie('username', '', time() - 3600, "/");
 
 // Redirect to Home page (not connected)
-header("Location: HomeController.php");
-exit();           
+header("Location: ../views/PaginaPrincipala.php");
+exit();
 ?>
