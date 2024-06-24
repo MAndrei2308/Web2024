@@ -56,9 +56,7 @@ while ($row = $all_product->fetch(PDO::FETCH_ASSOC)) {
         <div class="souvenirs__box-container">
             <?php foreach ($products as $product): ?>
                 <div class="souvenirs__box" onclick="location.href='ProductDetail.php?id=<?php echo $product['id']; ?>'">
-                    <div class="heart-label" id="<?php echo $product['id']; ?>">
-                        <span class="heart-icon"></span>
-                    </div>
+
                     <div class="souvenirs__image">
                         <img src="uploaded_img/<?php echo $product['image']; ?>" alt="souvenir">
                     </div>

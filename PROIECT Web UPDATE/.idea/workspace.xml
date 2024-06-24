@@ -23,6 +23,11 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/sass/Conectat_CategoryDesign.scss" root0="SKIP_HIGHLIGHTING" />
   </component>
+  <component name="PHPCSFixerBlackList">
+    <option name="filePaths">
+      <option value="$PROJECT_DIR$/dist/views/login.php" />
+    </option>
+  </component>
   <component name="PhpDebugGeneral" listening_started="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -70,10 +75,10 @@
       <recent name="C:\xampp\htdocs\PROIECT Web UPDATE\dist\views" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\PROIECT Web UPDATE\dist\css" />
       <recent name="C:\xampp\htdocs\PROIECT Web UPDATE andrei\dist\css" />
       <recent name="C:\xampp\htdocs\PROIECT Web UPDATE\dist\views" />
       <recent name="C:\xampp\htdocs\PROIECT Web UPDATE\dist\controllers" />
-      <recent name="C:\xampp\htdocs\PROIECT Web UPDATE\dist\css" />
       <recent name="C:\xampp\htdocs\PROIECT Web UPDATE\dist\php" />
     </key>
   </component>
@@ -140,6 +145,7 @@
       <workItem from="1718953210922" duration="12108000" />
       <workItem from="1719148318062" duration="1908000" />
       <workItem from="1719212772975" duration="24000" />
+      <workItem from="1719212798838" duration="12097000" />
     </task>
     <servers />
   </component>

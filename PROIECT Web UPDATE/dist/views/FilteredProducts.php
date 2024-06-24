@@ -52,9 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <?php }
         foreach ($products as $product): ?>
             <div class="souvenirs__box" onclick="location.href='ProductDetail.php?id=<?php echo htmlspecialchars($product['id']); ?>'">
-                <div class="heart-label">
-                    <span class="heart-icon"></span>
-                </div>
+                
                 <div class="souvenirs__image">
                     <img src="uploaded_img/<?php echo $product['image']; ?>" alt="souvenir">
                 </div>
