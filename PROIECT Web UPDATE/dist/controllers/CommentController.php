@@ -16,17 +16,27 @@ class CommentController {
         $success = $this->comment->addComment($productId, $userId, $comment);
         if ($success) {
             $username = $this->comment->getUsernameById($userId);
-            $timestamp = date('Y-m-d H:i:s'); // Obții data și ora curentă
-            return json_encode(['success' => true, 'username' => $username, 'timestamp' => $timestamp, 'comment_id' => $this->comment->getLastInsertId()]);
+            $timestamp = date('Y-m-d H:i:s'); // Obține data și ora curente
+            $commentId = $this->comment->getLastInsertId();
+            return json_encode(['success' => true, 'username' => $username, 'timestamp' => $timestamp, 'comment_id' => $commentId]);
         } else {
             return json_encode(['success' => false]);
         }
     }
 
     public function deleteComment($commentId, $userId) {
+        error_log("Attempting to delete comment $commentId by user $userId");
         $success = $this->comment->deleteComment($commentId, $userId);
+        if ($success) {
+            error_log("Comment $commentId deleted successfully by user $userId");
+        } else {
+            error_log("Failed to delete comment $commentId by user $userId");
+        }
         return json_encode(['success' => $success]);
     }
+
+
+
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

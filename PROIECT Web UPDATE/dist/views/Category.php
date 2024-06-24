@@ -30,11 +30,11 @@ while ($row = $all_product->fetch(PDO::FETCH_ASSOC)) {
     <input type="checkbox" id="toggler" class="toggler">
     <label for="toggler" class="toggler-icon">☰</label>
     <nav class="navbar">
-    <ul class="navbar__links">
-                <li class="navbar__links__item--link"><a href="../controllers/HomeController.php">Home</a></li>
-                <li class="navbar__links__item--link"><a href="../controllers/VirtualMapController.php">Virtual Map</a></li>
-                <li class="navbar__links__item--link"><a href="../controllers/CategoryController.php">Category</a></li>
-            </ul>
+        <ul class="navbar__links">
+            <li class="navbar__links__item--link"><a href="PaginaPrincipala.php">Home</a></li>
+            <li class="navbar__links__item--link"><a href="VirtualMap.php">Virtual Map</a></li>
+            <li class="navbar__links__item--link"><a href="Category.php">Category</a></li>
+        </ul>
     </nav>
     <div class="navbar__buttons">
         <a href="Login.php" class="navbar__buttons--button">Login</a>
@@ -89,11 +89,11 @@ while ($row = $all_product->fetch(PDO::FETCH_ASSOC)) {
             <h3>Useful Links</h3>
             <div class="spacer"></div>
             <ul>
-                    <li><a href="#">Terms of Use</a></li>
-                    <li><a href="#">Privacy and Cookies Statement</a></li>
-                    <li><a href="../controllers/AboutUsController.php">About us</a></li>
-                    <li><a href="../controllers/HelpController.php">Help</a></li>
-                </ul>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Privacy and Cookies Statement</a></li>
+                <li><a href="AboutUs.php">About us</a></li>
+                <li><a href="Help.php">Help</a></li>
+            </ul>
         </div>
     </div>
     <div class="footer__copyright">

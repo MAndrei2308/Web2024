@@ -41,12 +41,12 @@ class SendResetEmail {
 
             $this->passwordResetModel->storeResetToken($user['user_id'], $token, $expiry_time);
 
-            $reset_link = "http://localhost/PROIECT%20Web%20UPDATE%20-%20Copy/dist/views/ResetPassword.php?token=$token";
+            $reset_link = "https://localhost/PROIECT%20Web%20UPDATE/dist/views/ResetPassword.php?token=$token";
             $subject = "Reset Your Password";
             $message = "Click on the following link to reset your password: $reset_link";
             $headers = 'From: andrei.moisa.23@gmail.com' . "\r\n" .
-                       'Reply-To: andrei.moisa.23@gmail.com' . "\r\n" .
-                       'X-Mailer: PHP/' . phpversion();
+                'Reply-To: andrei.moisa.23@gmail.com' . "\r\n" .
+                'X-Mailer: PHP/' . phpversion();
 
             if (mail($email, $subject, $message, $headers)) {
                 $_SESSION['message'] = "A reset link has been sent to your email address.";

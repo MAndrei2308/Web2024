@@ -14,9 +14,6 @@ $message = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['add_product'])) {
         $message = $productController->addProduct();
-    } elseif (isset($_POST['update_product'])) {
-        $id = $_GET['edit'];
-        $message = $productController->updateProduct($id);
     } elseif (isset($_POST['export_html'])) {
         $productController->exportProducts('html');
     } elseif (isset($_POST['export_csv'])) {
@@ -35,7 +32,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['delete'])) {
 
 $products = $productController->getProducts();
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -67,8 +63,6 @@ $products = $productController->getProducts();
                 <option value="winter">Winter</option>
             </select>
             <select id="receiver" name="receiver" class="box">
-                <option value="Infant">Infant</option>
-                <option value="Toddler">Toddler</option>
                 <option value="Child">Child</option>
                 <option value="Adolescent">Adolescent</option>
                 <option value="Adult">Adult</option>

@@ -84,8 +84,6 @@ if(isset($message)){
                     <option value="winter" <?php if($row['period'] == 'winter') echo 'selected'; ?>>Winter</option>
                 </select>
                 <select id="receiver" name="receiver" class="box">
-                    <option value="Infant" <?php if($row['receiver'] == 'Infant') echo 'selected'; ?>>Infant</option>
-                    <option value="Toddler" <?php if($row['receiver'] == 'Toddler') echo 'selected'; ?>>Toddler</option>
                     <option value="Child" <?php if($row['receiver'] == 'Child') echo 'selected'; ?>>Child</option>
                     <option value="Adolescent" <?php if($row['receiver'] == 'Adolescent') echo 'selected'; ?>>Adolescent</option>
                     <option value="Adult" <?php if($row['receiver'] == 'Adult') echo 'selected'; ?>>Adult</option>

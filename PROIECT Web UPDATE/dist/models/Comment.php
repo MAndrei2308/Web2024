@@ -34,8 +34,19 @@ class Comment {
         $stmt = $this->db->prepare("DELETE FROM comments WHERE comment_id = ? AND user_id = ?");
         $stmt->bindParam(1, $commentId, PDO::PARAM_INT);
         $stmt->bindParam(2, $userId, PDO::PARAM_INT);
-        return $stmt->execute();
+        $stmt->execute();
+
+        if ($stmt->rowCount() > 0) {
+            error_log("Comment $commentId deleted successfully by user $userId");
+        } else {
+            error_log("Failed to delete comment $commentId by user $userId");
+        }
+
+        return $stmt->rowCount() > 0;
     }
+
+
+
 
     public function getUsernameById($userId) {
         $stmt = $this->db->prepare("SELECT username FROM users WHERE user_id = ?");

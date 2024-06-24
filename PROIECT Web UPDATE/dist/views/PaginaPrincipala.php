@@ -61,8 +61,6 @@
                     <label for="receiver">Receiver:</label>
                     <select id="receiver" name="receiver">
                         <option value="">Select a receiver...</option>
-                        <option value="Infant">Infant</option>
-                        <option value="Toddler">Toddler</option>
                         <option value="Child">Child</option>
                         <option value="Adolescent">Adolescent</option>
                         <option value="Adult">Adult</option>

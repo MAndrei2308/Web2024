@@ -40,11 +40,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <label for="toggler" class="toggler-icon">☰</label>
 
     <nav class="navbar">
-    <ul class="navbar__links">
-                <li class="navbar__links__item--link"><a href="../controllers/HomeController.php">Home</a></li>
-                <li class="navbar__links__item--link"><a href="../controllers/VirtualMapController.php">Virtual Map</a></li>
-                <li class="navbar__links__item--link"><a href="../controllers/CategoryController.php">Category</a></li>
-            </ul>
+        <ul class="navbar__links">
+            <li class="navbar__links__item--link"><a href="Conectat_Home.php">Home</a></li>
+            <li class="navbar__links__item--link"><a href="Conectat_VirtualMap.php">Virtual Map</a></li>
+            <li class="navbar__links__item--link"><a href="Conectat_Category.php">Category</a></li>
+        </ul>
     </nav>
     <div class="navbar__buttons">
         <input type="checkbox" id="user" class="user">
@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <?php if(empty($products)){?>
             <h1 class="message-heading"> No products found !! </h1>
         <?php }
-            foreach ($products as $product): ?>
+        foreach ($products as $product): ?>
             <div class="souvenirs__box">
                 <form action="../endpoints/handle_favorite.php" method="POST" class="favorite-form">
                     <input type="hidden" name="product_id" value="<?php echo htmlspecialchars($product['id']); ?>">
@@ -99,11 +99,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <h3>Useful Links</h3>
             <div class="spacer"></div>
             <ul>
-                    <li><a href="#">Terms of Use</a></li>
-                    <li><a href="#">Privacy and Cookies Statement</a></li>
-                    <li><a href="../controllers/AboutUsController.php">About us</a></li>
-                    <li><a href="../controllers/HelpController.php">Help</a></li>
-                </ul>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Privacy and Cookies Statement</a></li>
+                <li><a href="AboutUs.php">About us</a></li>
+                <li><a href="Help.php">Help</a></li>
+            </ul>
         </div>
     </div>
     <div class="footer__copyright">

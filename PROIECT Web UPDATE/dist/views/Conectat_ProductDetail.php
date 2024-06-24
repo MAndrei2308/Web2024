@@ -53,16 +53,16 @@ $coordinates = isset($countryCoordinates[$product['country']]) ? $countryCoordin
     <label for="toggler" class="toggler-icon">☰</label>
 
     <nav class="navbar">
-    <ul class="navbar__links">
-                <li class="navbar__links__item--link"><a href="../controllers/HomeController.php">Home</a></li>
-                <li class="navbar__links__item--link"><a href="../controllers/VirtualMapController.php">Virtual Map</a></li>
-                <li class="navbar__links__item--link"><a href="../controllers/CategoryController.php">Category</a></li>
-            </ul>
+        <ul class="navbar__links">
+            <li class="navbar__links__item--link"><a href="Conectat_Home.php">Home</a></li>
+            <li class="navbar__links__item--link"><a href="Conectat_VirtualMap.php">Virtual Map</a></li>
+            <li class="navbar__links__item--link"><a href="Conectat_Category.php">Category</a></li>
+        </ul>
     </nav>
     <div class="navbar__buttons">
-            <input type="checkbox" id="user" class="user">
-            <label for="user" class="user-icon"><a href="../controllers/ProfilController.php"><img src="../../img/profile-user.png" alt="profile"></a></label>
-        </div>
+        <input type="checkbox" id="user" class="user">
+        <label for="user" class="user-icon"><a href="ProfilPagina.php"><img src="../../img/profile-user.png" alt="profile"></a></label>
+    </div>
 </header>
 <div class="product-detail">
     <div class="product-image">
@@ -88,7 +88,7 @@ $coordinates = isset($countryCoordinates[$product['country']]) ? $countryCoordin
 
     <div id="comments">
         <?php foreach ($comments as $comment): ?>
-            <div class="comment" data-comment-id="<?php echo $comment['comment_id']; ?>">
+            <div class="comment" data-comment-id="<?php echo $comment['comment_id']; ?>" id="comment-<?php echo $comment['comment_id']; ?>">
                 <p><?php echo htmlspecialchars($comment['comment']); ?></p>
                 <small>Posted by <?php echo htmlspecialchars($comment['username']); ?> on <?php echo $comment['created_at']; ?></small>
                 <?php if ($comment['user_id'] == $user_id): ?>
@@ -96,6 +96,7 @@ $coordinates = isset($countryCoordinates[$product['country']]) ? $countryCoordin
                 <?php endif; ?>
             </div>
         <?php endforeach; ?>
+
     </div>
 
 </div>
@@ -121,19 +122,19 @@ $coordinates = isset($countryCoordinates[$product['country']]) ? $countryCoordin
             <h3>Useful Links</h3>
             <div class="spacer"></div>
             <ul>
-                    <li><a href="#">Terms of Use</a></li>
-                    <li><a href="#">Privacy and Cookies Statement</a></li>
-                    <li><a href="../controllers/AboutUsController.php">About us</a></li>
-                    <li><a href="../controllers/HelpController.php">Help</a></li>
-                </ul>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Privacy and Cookies Statement</a></li>
+                <li><a href="AboutUs.php">About us</a></li>
+                <li><a href="Help.php">Help</a></li>
+            </ul>
         </div>
     </div>
     <div class="footer__copyright">
         <p>&copy; 2024 Souvenirs. All rights reserved.</p>
     </div>
 </footer>
-
 <script>
+    // Initialize the map
     var map = L.map('map').setView([<?php echo $coordinates[0]; ?>, <?php echo $coordinates[1]; ?>], 5);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -144,8 +145,9 @@ $coordinates = isset($countryCoordinates[$product['country']]) ? $countryCoordin
         .bindPopup('<?php echo $product['country']; ?>')
         .openPopup();
 
-    // AJAX pentru trimiterea comentariilor
+    // AJAX for submitting comments
     $(document).ready(function() {
+        // Function to handle adding a comment
         $('#commentForm').on('submit', function(e) {
             e.preventDefault();
             var product_id = $('#product_id').val();
@@ -165,12 +167,12 @@ $coordinates = isset($countryCoordinates[$product['country']]) ? $countryCoordin
                     var data = JSON.parse(response);
                     if (data.success) {
                         var newComment = `
-                        <div class="comment" data-comment-id="${data.comment_id}">
+                        <div class="comment" data-comment-id="${data.comment_id}" id="comment-${data.comment_id}">
                             <p>${comment}</p>
                             <small>Posted by ${data.username} on ${data.timestamp}</small>
-                            <button class="delete-comment" data-comment-id="${data.comment_id}">Delete</button>
+                            <button class="delete-comment" data-comment-id="${data.comment_id}" data-user-id="${user_id}">Delete</button>
                         </div>`;
-                        $('#comments').append(newComment); // Append the new comment
+                        $('#comments').prepend(newComment); // Add the new comment at the beginning of the list
                         $('#comment').val('');
                     } else {
                         alert('Failed to add comment.');
@@ -182,20 +184,24 @@ $coordinates = isset($countryCoordinates[$product['country']]) ? $countryCoordin
             });
         });
 
+        // Function to handle deleting a comment
         $(document).on('click', '.delete-comment', function() {
             var commentId = $(this).data('comment-id');
+            var userId = $(this).data('user-id'); // Use the correct user_id from the data attribute
+
             if (confirm('Are you sure you want to delete this comment?')) {
                 $.ajax({
                     type: 'POST',
                     url: '../controllers/CommentController.php',
                     data: {
                         action: 'deleteComment',
-                        comment_id: commentId
+                        comment_id: commentId,
+                        user_id: userId // Ensure correct user_id is passed
                     },
                     success: function(response) {
                         var data = JSON.parse(response);
                         if (data.success) {
-                            $('div[data-comment-id="' + commentId + '"]').remove();
+                            $('#comment-' + commentId).remove(); // Remove the comment from DOM on success
                         } else {
                             alert('Failed to delete comment.');
                         }
@@ -208,8 +214,8 @@ $coordinates = isset($countryCoordinates[$product['country']]) ? $countryCoordin
         });
     });
 
-
 </script>
+
 
 </body>
 </html>
