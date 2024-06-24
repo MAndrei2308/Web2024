@@ -2,7 +2,7 @@
 session_start();
 include '../models/database.php';
 
-class ProfileController {
+class UpdateProfilController {
     private $db;
     private $user_id;
     private $valid_genders = ['male', 'female'];
@@ -150,6 +150,6 @@ class ProfileController {
     }
 }
 
-$controller = new ProfileController();
+$controller = new UpdateProfilController();
 $controller->handleRequest();
 ?>

@@ -2,7 +2,7 @@
 session_start();
 include_once '../models/database.php';
 
-class SignUpController {
+class RegisterController {
     private $db;
 
     public function __construct() {
@@ -106,5 +106,5 @@ class SignUpController {
     }
 }
 
-$controller = new SignUpController();
+$controller = new RegisterController();
 ?>

@@ -4,7 +4,7 @@ include '../models/database.php';
 include '../models/UserModel.php';
 include '../models/PasswordResetModel.php';
 
-class PasswordResetController {
+class SendResetEmail {
     private $db;
     private $userModel;
     private $passwordResetModel;
@@ -64,6 +64,6 @@ class PasswordResetController {
     }
 }
 
-$controller = new PasswordResetController();
+$controller = new SendResetEmail();
 $controller->handleRequest();
 ?>
